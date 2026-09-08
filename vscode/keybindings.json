@@ -19,6 +19,27 @@
     "when": "auxiliaryBarMaximized"
   },
   {
+    "key": "shift+cmd+b",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.toggleAuxiliaryBar"
+      ]
+    },
+    "when": "(sideBarVisible && auxiliaryBarVisible) || (!sideBarVisible && !auxiliaryBarVisible)"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && !auxiliaryBarVisible"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "!sideBarVisible && auxiliaryBarVisible"
+  },
+  {
     "key": "shift+cmd+e",
     "command": "workbench.view.explorer"
   },
