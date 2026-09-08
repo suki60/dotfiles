@@ -526,6 +526,10 @@
     "when": "editorTextFocus"
   },
   {
+    "key": "ctrl+'",
+    "command": "bracketeer.changeQuotesTo"
+  },
+  {
     "key": "alt+`",
     "command": "extension.selectBackTick",
     "when": "editorTextFocus"
@@ -549,6 +553,10 @@
     "key": "shift+alt+[",
     "command": "bracketeer.removeBrackets",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+]",
+    "command": "bracketeer.changeBracketsTo"
   },
   {
     "key": "shift+alt+backspace",
