@@ -47,6 +47,7 @@
   "editor.fontSize": 15,
   "editor.fontWeight": "300",
   "editor.formatOnPaste": false,
+  "editor.glyphMargin": false,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.minimap.enabled": false,
   "editor.suggest.filterGraceful": false,
