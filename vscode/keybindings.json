@@ -196,11 +196,6 @@
       "command": "multiCommand.scmFocusChanges"
     }
   },
-  {
-    "key": "escape",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "auxiliaryBarFocus || sideBarFocus || panelFocus"
-  },
   // editor actions
   {
     "key": "cmd+1",
@@ -931,5 +926,9 @@
     "key": "cmd+`",
     "command": "agents.openSessionInVSCode",
     "when": "isSessionsWindow"
+  },
+  {
+    "key": "ctrl+alt+cmd+`",
+    "command": "update.restartToUpdate"
   }
 ]
