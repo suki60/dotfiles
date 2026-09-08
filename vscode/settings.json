@@ -50,6 +50,8 @@
   "editor.glyphMargin": false,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.minimap.enabled": false,
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": true,
   "editor.suggest.filterGraceful": false,
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
@@ -90,9 +92,9 @@
   "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
   "gitHistory.showFileHistorySplit": false,
   "github.copilot.enable": {
-    "*": false,
-    "markdown": false,
+    "*": true,
     "plaintext": false,
+    "markdown": false,
     "scminput": false
   },
   "github.copilot.nextEditSuggestions.enabled": true,
