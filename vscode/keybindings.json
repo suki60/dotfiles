@@ -131,14 +131,6 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
-    "key": "shift+cmd+b",
-    "command": "bookmarks.listFromAllFiles"
-  },
-  {
-    "key": "ctrl+alt+cmd+b",
-    "command": "bookmarks.clear"
-  },
-  {
     "key": "ctrl+alt+cmd+n",
     "command": "workbench.action.duplicateWorkspaceInNewWindow"
   },
@@ -244,10 +236,6 @@
   {
     "key": "cmd+j",
     "command": "references-view.showCallHierarchy"
-  },
-  {
-    "key": "cmd+b",
-    "command": "bookmarks.toggleLabeled"
   },
   {
     "key": "cmd+e",
