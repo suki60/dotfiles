@@ -168,6 +168,7 @@
   "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.editor.preventPinnedEditorClose": "never",
+  "workbench.editor.showTabIndex": true,
   "workbench.editor.useModal": "off",
   "workbench.editorAssociations": {
     "*.svg": "default"
