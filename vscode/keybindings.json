@@ -164,6 +164,10 @@
     "command": "workbench.action.reloadWindow"
   },
   {
+    "key": "ctrl+alt+cmd+`",
+    "command": "update.restartToUpdate"
+  },
+  {
     "key": "shift+cmd+.",
     "command": "editor.action.fixAll"
   },
@@ -943,9 +947,5 @@
     "key": "cmd+`",
     "command": "agents.openSessionInVSCode",
     "when": "isSessionsWindow"
-  },
-  {
-    "key": "ctrl+alt+cmd+`",
-    "command": "update.restartToUpdate"
   }
 ]
