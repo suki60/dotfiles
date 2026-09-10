@@ -54,5 +54,12 @@ for plugin in "$DOTFILES"/nnn/plugins/*; do
   link "$plugin" "$NNN_PLUGINS/$(basename "$plugin")"
 done
 
+echo "→ Raycast scripts"
+SCRIPTS="$HOME/.scripts"
+
+for script in "$DOTFILES"/raycast/scripts/*; do
+  link "$script" "$SCRIPTS/$(basename "$script")"
+done
+
 echo ""
 echo "Done."
