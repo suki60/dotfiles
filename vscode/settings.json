@@ -102,6 +102,7 @@
     "ui.navigation.importShortcut": "Definition"
   },
   "js/ts.format.semicolons": "remove",
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "js/ts.preferGoToSourceDefinition": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "multiCommand.commands": [
