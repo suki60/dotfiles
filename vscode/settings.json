@@ -80,7 +80,6 @@
     "**/.git": true
   },
   "git-graph.dialog.rebase.launchInteractiveRebase": true,
-  "git-graph.repository.showRemoteBranches": false,
   "git.allowForcePush": true,
   "git.allowNoVerifyCommit": true,
   "git.autoRepositoryDetection": false,
