@@ -148,6 +148,7 @@
       "(?:'|\"|`)([^']*)(?:'|\"|`)"
     ]
   ],
+  "tailwindCSS.lint.suggestCanonicalClasses": "ignore",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.profiles.osx": {
