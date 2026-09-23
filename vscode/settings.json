@@ -36,6 +36,7 @@
   "claudeCode.allowDangerouslySkipPermissions": true,
   "claudeCode.enableNewConversationShortcut": true,
   "claudeCode.focusView": true,
+  "claudeCode.hideOnboarding": true,
   "claudeCode.initialPermissionMode": "bypassPermissions",
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": false,
@@ -92,8 +93,8 @@
   "gitHistory.showFileHistorySplit": false,
   "github.copilot.enable": {
     "*": false,
-    "plaintext": false,
     "markdown": false,
+    "plaintext": false,
     "scminput": false
   },
   "github.copilot.nextEditSuggestions.enabled": true,
