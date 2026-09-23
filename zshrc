@@ -12,7 +12,6 @@ alias pg="cd ~/Documents/playground"
 alias pj="cd ~/Documents/projects"
 
 # repos
-alias wp="cd ~/Documents/projects/whitepepper"
 alias dot="cd ~/Documents/projects/dotfiles"
 alias pf="cd ~/Documents/projects/portfolio"
 alias cv="cd ~/Documents/projects/cv"
