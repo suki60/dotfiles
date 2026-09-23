@@ -1,7 +1,20 @@
 {
+  "model": "sonnet",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    }
+  },
   "permissions": {
-    "defaultMode": "bypassPermissions"
+    "defaultMode": "bypassPermissions",
+    "deny": [
+      "Bash(git commit*)",
+      "Bash(git push*)"
+    ]
   },
   "skipDangerousModePermissionPrompt": true,
-  "theme": "dark"
+  "theme": "dark",
+  "worktree": {
+    "bgIsolation": "none"
+  }
 }
