@@ -295,10 +295,6 @@
     "command": "editor.action.goToTypeDefinition"
   },
   {
-    "key": "cmd+/",
-    "command": "github.copilot.chat.completions.toggle"
-  },
-  {
     "key": "cmd+\\",
     "command": "workbench.action.keepEditor"
   },
@@ -609,6 +605,10 @@
   {
     "key": "ctrl+tab",
     "command": "workbench.action.quickSwitchWindow"
+  },
+  {
+    "key": "ctrl+/",
+    "command": "github.copilot.chat.completions.toggle"
   },
   {
     "key": "ctrl+t",
