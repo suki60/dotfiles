@@ -32,6 +32,7 @@
   "biome.enabled": false,
   "bookmarks.sideBar.countBadge": "off",
   "chat.fontSize": 14,
+  "css.lint.unknownAtRules": "ignore",
   "chat.titleBar.openInAgentsWindow.enabled": false,
   "claudeCode.allowDangerouslySkipPermissions": true,
   "claudeCode.enableNewConversationShortcut": true,
