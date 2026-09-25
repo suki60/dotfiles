@@ -15,6 +15,7 @@ alias pj="cd ~/Documents/projects"
 alias dot="cd ~/Documents/projects/dotfiles"
 alias pf="cd ~/Documents/projects/portfolio"
 alias cv="cd ~/Documents/projects/cv"
+alias wed="cd ~/Documents/projects/wedding"
 
 # claude
 alias k="claude"
