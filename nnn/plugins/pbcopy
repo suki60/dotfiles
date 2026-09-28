@@ -1,0 +1,8 @@
+#!/bin/sh
+if file -b --mime-type "$nnn" | grep -q '^image/'; then
+    osascript -e 'on run argv
+        set the clipboard to (read (POSIX file (item 1 of argv)) as picture)
+    end run' "$nnn"
+else
+    printf '%s' "$nnn" | pbcopy
+fi
