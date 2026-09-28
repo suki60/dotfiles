@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ -d "$nnn" ]; then
+    cd "$nnn" && claude
+else
+    cd "$(dirname "$nnn")" && claude
+fi
