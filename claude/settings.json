@@ -19,6 +19,7 @@
     }
   },
   "skipDangerousModePermissionPrompt": true,
+  "autoUpdates": false,
   "theme": "dark-ansi",
   "spinnerTipsEnabled": false
 }
