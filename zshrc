@@ -9,13 +9,13 @@ alias doc="cd ~/Documents"
 alias wk="cd ~/Documents/work"
 alias box="cd ~/Documents/box"
 alias pg="cd ~/Documents/playground"
-alias pj="cd ~/Documents/projects"
+alias rep="cd ~/Documents/repos"
 
 # repos
-alias dot="cd ~/Documents/projects/dotfiles"
-alias pf="cd ~/Documents/projects/portfolio"
-alias cv="cd ~/Documents/projects/cv"
-alias wed="cd ~/Documents/projects/wedding"
+alias dot="cd ~/Documents/repos/dotfiles"
+alias pf="cd ~/Documents/repos/portfolio"
+alias cv="cd ~/Documents/repos/cv"
+alias wed="cd ~/Documents/repos/wedding"
 
 # claude
 alias k="claude"
@@ -26,7 +26,7 @@ alias kcp="k --continue -p"
 # vscode
 alias c="code"
 alias czsh="c ~/.zshrc"
-alias cdot="c ~/Documents/projects/dotfiles"
+alias cdot="c ~/Documents/repos/dotfiles"
 alias ccl="c ~/.claude"
 
 # npm

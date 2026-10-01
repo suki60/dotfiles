@@ -16,7 +16,7 @@
 
 set -euo pipefail
 
-target="$HOME/Documents/projects/wedding"
+target="$HOME/Documents/repos/wedding"
 
 # Locate the `code` CLI even when Raycast runs with a minimal PATH
 code_bin="$(command -v code || true)"
