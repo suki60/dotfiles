@@ -20,6 +20,7 @@ alias wed="cd ~/Documents/repos/wedding"
 # claude
 alias k="claude"
 alias kp="k -p"
+alias kr="k --resume"
 alias kc="k --continue"
 alias kcp="k --continue -p"
 export BASH_DEFAULT_TIMEOUT_MS="7200000"
