@@ -31,16 +31,6 @@ VSCODE="$HOME/Library/Application Support/Code/User"
 link "$DOTFILES/vscode/settings.json"    "$VSCODE/settings.json"
 link "$DOTFILES/vscode/keybindings.json" "$VSCODE/keybindings.json"
 
-echo "→ Cursor"
-CURSOR="$HOME/Library/Application Support/Cursor/User"
-link "$DOTFILES/cursor/settings.json"    "$CURSOR/settings.json"
-link "$DOTFILES/cursor/keybindings.json" "$CURSOR/keybindings.json"
-
-echo "→ Zed"
-ZED="$HOME/.config/zed"
-link "$DOTFILES/zed/settings.json" "$ZED/settings.json"
-link "$DOTFILES/zed/keymap.json"   "$ZED/keymap.json"
-
 echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
 
