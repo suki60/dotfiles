@@ -1,5 +1,14 @@
 {
+  "autoUpdates": false,
+  "awaySummaryEnabled": false,
+  "model": "sonnet",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    }
+  },
   "permissions": {
+    "defaultMode": "auto",
     "deny": [
       "Bash(git commit*)",
       "Bash(git push*)",
@@ -14,20 +23,12 @@
       "Bash(drizzle-kit push*)",
       "Bash(node -e*)",
       "Bash(psql*)"
-    ],
-    "defaultMode": "bypassPermissions"
-  },
-  "model": "sonnet",
-  "worktree": {
-    "bgIsolation": "none"
-  },
-  "modelSettings": {
-    "claude-sonnet-5": {
-      "effortLevel": "medium"
-    }
+    ]
   },
   "skipDangerousModePermissionPrompt": true,
-  "autoUpdates": false,
+  "spinnerTipsEnabled": false,
   "theme": "dark-ansi",
-  "spinnerTipsEnabled": false
+  "worktree": {
+    "bgIsolation": "none"
+  }
 }
