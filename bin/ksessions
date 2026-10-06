@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+# List Claude Code sessions for the current folder by title.
+#   enter → resume the selected session   x → delete it (asks to confirm)
+#   ↑/↓ to move, q/esc to quit
+set -euo pipefail
+
+command -v fzf >/dev/null || { echo "fzf required"; exit 1; }
+command -v jq  >/dev/null || { echo "jq required";  exit 1; }
+
+DIR="${1:-$PWD}"
+DIR="$(cd "$DIR" && pwd -P)"
+PROJ="$HOME/.claude/projects/$(printf '%s' "$DIR" | sed 's/[^A-Za-z0-9]/-/g')"
+
+[[ -d "$PROJ" ]] || { echo "No sessions for $DIR"; exit 0; }
+
+title_of() {
+  local f="$1" t
+  t="$(grep -h '"type":"custom-title"' "$f" | tail -1 | jq -r '.customTitle // empty' 2>/dev/null || true)"
+  [[ -z "$t" ]] && t="$(grep -h '"type":"ai-title"' "$f" | tail -1 | jq -r '.aiTitle // empty' 2>/dev/null || true)"
+  [[ -z "$t" ]] && t="$(grep -h '"type":"user"' "$f" | jq -r 'if (.message.content|type)=="string" then .message.content else (.message.content[0].text // "") end' 2>/dev/null | grep -v '^<' | grep -m1 . | cut -c1-80 || true)"
+  printf '%s' "${t:-(untitled)}"
+}
+
+list() {
+  local f id when
+  while IFS= read -r f; do
+    id="$(basename "$f" .jsonl)"
+    when="$(date -r "$f" '+%Y-%m-%d %H:%M')"
+    printf '%s\t%s\t%s\n' "$id" "$when" "$(title_of "$f")"
+  done < <(ls -t "$PROJ"/*.jsonl 2>/dev/null)
+}
+
+while true; do
+  rows="$(list)"
+  [[ -n "$rows" ]] || { echo "No sessions for $DIR"; exit 0; }
+
+  out="$(printf '%s\n' "$rows" | fzf --disabled --delimiter=$'\t' --with-nth=2.. \
+    --expect=x,q --header="enter: open   x: delete   q: quit   ($DIR)" \
+    --prompt='session> ' --no-sort --reverse || true)"
+  key="$(sed -n 1p <<<"$out")"
+  line="$(sed -n 2p <<<"$out")"
+  [[ -z "$line" || "$key" == q ]] && exit 0
+  id="${line%%$'\t'*}"
+  case "$key" in
+    "") cd "$DIR" && exec claude --resume "$id" ;;
+    x)
+      title="${line##*$'\t'}"
+      read -r -p "Delete \"$title\"? [y/N] " ans
+      if [[ "$ans" == [yY] ]]; then
+        rm -f "$PROJ/$id.jsonl"
+        rm -rf "$PROJ/$id"
+        echo "deleted $id"
+      fi
+      ;;
+  esac
+done

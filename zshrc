@@ -24,6 +24,7 @@ alias kr="k --resume"
 alias kc="k --continue"
 alias kcp="k --continue -p"
 alias ka="k agents"
+alias ks="$HOME/Documents/repos/dotfiles/bin/ksessions"
 export BASH_DEFAULT_TIMEOUT_MS="7200000"
 export BASH_MAX_TIMEOUT_MS="7200000"
 
