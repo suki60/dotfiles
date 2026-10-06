@@ -30,6 +30,7 @@ echo "→ VSCode"
 VSCODE="$HOME/Library/Application Support/Code/User"
 link "$DOTFILES/vscode/settings.json"    "$VSCODE/settings.json"
 link "$DOTFILES/vscode/keybindings.json" "$VSCODE/keybindings.json"
+link "$DOTFILES/vscode/tasks.json"       "$VSCODE/tasks.json"
 
 echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"

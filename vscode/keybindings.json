@@ -923,7 +923,8 @@
   },
   {
     "key": "cmd+g shift+alt+cmd+backspace",
-    "command": "git.cleanAll"
+    "command": "workbench.action.tasks.runTask",
+    "args": "git.cleanAll"
   },
   {
     "key": "cmd+g shift+cmd+r",
