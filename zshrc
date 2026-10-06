@@ -29,9 +29,6 @@ export BASH_MAX_TIMEOUT_MS="7200000"
 
 # vscode
 alias c="code"
-alias czsh="c ~/.zshrc"
-alias cdot="c ~/Documents/repos/dotfiles"
-alias ccl="c ~/.claude"
 
 # npm
 alias n="npm"
