@@ -734,6 +734,30 @@
   },
   // source control
   {
+    "key": "cmd+;",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "list.focusFirst",
+        "list.select"
+      ]
+    },
+    "when": "activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus"
+  },
+  {
+    "key": "cmd+'",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "list.focusFirst",
+        "list.focusDown",
+        "list.focusDown",
+        "list.focusDown"
+      ]
+    },
+    "when": "activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus"
+  },
+  {
     "key": "ctrl+alt+cmd+enter",
     "command": "git.commitNoVerify",
     "when": "activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus"
