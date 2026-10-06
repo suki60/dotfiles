@@ -34,6 +34,7 @@ link "$DOTFILES/vscode/tasks.json"       "$VSCODE/tasks.json"
 
 echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
+link "$DOTFILES/claude/CLAUDE.md"     "$HOME/.claude/CLAUDE.md"
 
 echo "→ Ghostty"
 link "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
