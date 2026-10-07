@@ -20,6 +20,10 @@
   },
   {
     "key": "shift+cmd+b",
+    "command": "workbench.action.toggleStatusbarVisibility"
+  },
+  {
+    "key": "shift+cmd+n",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -27,17 +31,17 @@
         "workbench.action.toggleAuxiliaryBar"
       ]
     },
-    "when": "(sideBarVisible && auxiliaryBarVisible) || (!sideBarVisible && !auxiliaryBarVisible)"
+    "when": "auxiliaryBarVisible && sideBarVisible || !auxiliaryBarVisible && !sideBarVisible"
   },
   {
-    "key": "shift+cmd+b",
+    "key": "shift+cmd+n",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarVisible && !auxiliaryBarVisible"
   },
   {
-    "key": "shift+cmd+b",
+    "key": "shift+cmd+n",
     "command": "workbench.action.toggleAuxiliaryBar",
-    "when": "!sideBarVisible && auxiliaryBarVisible"
+    "when": "auxiliaryBarVisible && !sideBarVisible"
   },
   {
     "key": "shift+cmd+e",
