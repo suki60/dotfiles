@@ -13,6 +13,19 @@
         "close": true
       },
       "problemMatcher": []
+    },
+    {
+      "label": "copy-repo-name",
+      "type": "shell",
+      "command": "basename \"$PWD\" | pbcopy",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "silent",
+        "close": true
+      },
+      "problemMatcher": []
     }
   ]
 }

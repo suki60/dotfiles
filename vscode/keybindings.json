@@ -619,6 +619,11 @@
     "command": "revealFileInOS"
   },
   {
+    "key": "ctrl+n",
+    "command": "workbench.action.tasks.runTask",
+    "args": "copy-repo-name"
+  },
+  {
     "key": "ctrl+o",
     "command": "pr.openModifiedFile"
   },
@@ -924,7 +929,7 @@
   {
     "key": "cmd+g shift+alt+cmd+backspace",
     "command": "workbench.action.tasks.runTask",
-    "args": "git.cleanAll"
+    "args": "git-clean-all"
   },
   {
     "key": "cmd+g shift+cmd+r",
