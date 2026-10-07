@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "git.cleanAll",
+      "label": "git-clean-all",
       "type": "shell",
       "command": "git reset --hard && git clean -fd",
       "options": {
