@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # List Claude Code sessions for the current folder by title.
-#   enter → resume the selected session   c → open its file in VS Code   p → open project folder in VS Code   x → delete it (asks to confirm)
+#   enter → resume the selected session   n → start a new chat in this folder   c → open its file in VS Code   p → open project folder in VS Code   x → delete it (asks to confirm)
 #   ↑/↓ to move, q/esc to quit
 set -euo pipefail
 
@@ -35,7 +35,7 @@ while true; do
   [[ -n "$rows" ]] || { echo "No sessions for $DIR"; exit 0; }
 
   out="$(printf '%s\n' "$rows" | fzf --disabled --delimiter=$'\t' --with-nth=2.. \
-    --expect=c,p,x,q --header="enter: open   c: code   p: project   x: delete   q: quit   ($DIR)" \
+    --expect=c,n,p,x,q --header="enter: open   n: new chat   c: code   p: project   x: delete   q: quit   ($DIR)" \
     --prompt='session> ' --no-sort --reverse || true)"
   key="$(sed -n 1p <<<"$out")"
   line="$(sed -n 2p <<<"$out")"
@@ -43,6 +43,7 @@ while true; do
   id="${line%%$'\t'*}"
   case "$key" in
     "") cd "$DIR" && exec claude --resume "$id" ;;
+    n) cd "$DIR" && exec claude ;;
     c)
       targets=("$PROJ/$id.jsonl")
       [[ -d "$PROJ/$id" ]] && targets+=("$PROJ/$id")
