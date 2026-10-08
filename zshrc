@@ -35,6 +35,9 @@ alias c="code"
 alias n="npm"
 alias ni="n i"
 alias nr="n run"
+alias nrd="nr dev"
+alias nrs="nr start"
+alias nrb="nr build"
 
 # pnpm
 alias p="pnpm"
