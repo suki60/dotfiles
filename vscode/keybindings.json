@@ -324,6 +324,10 @@
   },
   {
     "key": "cmd+;",
+    "command": "editor.action.goToImplementation"
+  },
+  {
+    "key": "cmd+'",
     "command": "typescript.goToSourceDefinition"
   },
   {
@@ -1001,11 +1005,6 @@
   {
     "key": "ctrl+k",
     "command": "claude-code.insertAtMentioned",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+cmd+k",
-    "command": "-claude-code.insertAtMentioned",
     "when": "editorTextFocus"
   }
 ]
