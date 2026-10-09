@@ -9,38 +9,6 @@
     "command": "workbench.action.toggleAuxiliaryBar"
   },
   {
-    "key": "alt+cmd+a",
-    "command": "workbench.action.closeAuxiliaryBar",
-    "when": "sideBarVisible"
-  },
-  {
-    "key": "alt+cmd+a",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.closeAuxiliaryBar",
-        "workbench.action.toggleSidebarVisibility"
-      ]
-    },
-    "when": "!sideBarVisible"
-  },
-  {
-    "key": "alt+cmd+\\",
-    "command": "workbench.action.closeSidebar",
-    "when": "auxiliaryBarVisible"
-  },
-  {
-    "key": "alt+cmd+\\",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.closeSidebar",
-        "workbench.action.toggleAuxiliaryBar"
-      ]
-    },
-    "when": "!auxiliaryBarVisible"
-  },
-  {
     "key": "ctrl+alt+cmd+\\",
     "command": "workbench.action.maximizeAuxiliaryBar",
     "when": "!auxiliaryBarMaximized"
@@ -55,33 +23,16 @@
     "command": "workbench.action.toggleStatusbarVisibility"
   },
   {
-    "key": "shift+cmd+n",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.action.toggleAuxiliaryBar"
-      ]
-    },
-    "when": "auxiliaryBarVisible && sideBarVisible || !auxiliaryBarVisible && !sideBarVisible"
-  },
-  {
-    "key": "shift+cmd+n",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && !auxiliaryBarVisible"
-  },
-  {
-    "key": "shift+cmd+n",
-    "command": "workbench.action.toggleAuxiliaryBar",
-    "when": "auxiliaryBarVisible && !sideBarVisible"
-  },
-  {
     "key": "shift+cmd+e",
     "command": "workbench.view.explorer"
   },
   {
     "key": "shift+cmd+y",
     "command": "workbench.view.extension.typescript-explorer"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "workbench.panel.chat"
   },
   {
     "key": "shift+cmd+d",
@@ -110,10 +61,6 @@
   {
     "key": "shift+cmd+g",
     "command": "workbench.view.extension.github-pull-requests"
-  },
-  {
-    "key": "shift+cmd+j",
-    "command": "atlascode.views.jira.assignedWorkItemsTreeView.focus"
   },
   {
     "key": "shift+cmd+u",
@@ -184,10 +131,6 @@
     "command": "workbench.action.closeAllGroups"
   },
   {
-    "key": "shift+cmd+c",
-    "command": "workbench.files.action.collapseExplorerFolders"
-  },
-  {
     "key": "ctrl+alt+cmd+n",
     "command": "workbench.action.duplicateWorkspaceInNewWindow"
   },
@@ -226,28 +169,6 @@
   {
     "key": "shift+alt+cmd+backspace",
     "command": "git.clean"
-  },
-  {
-    "key": "ctrl+alt+cmd+o",
-    "command": "git.openAllChanges"
-  },
-  {
-    "key": "ctrl+alt+cmd+u",
-    "command": "git.viewStagedChanges"
-  },
-  {
-    "key": "shift+cmd+;",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "command": "multiCommand.scmFocusMessage"
-    }
-  },
-  {
-    "key": "shift+cmd+'",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "command": "multiCommand.scmFocusChanges"
-    }
   },
   // editor actions
   {
@@ -317,6 +238,10 @@
   {
     "key": "cmd+u",
     "command": "typescript.removeUnusedImports"
+  },
+  {
+    "key": "cmd+l",
+    "command": "expandLineSelection",
   },
   {
     "key": "cmd+;",
@@ -726,6 +651,86 @@
     "command": "workbench.action.unpinEditor",
     "when": "activeEditorIsPinned"
   },
+// hyper actions
+  {
+    "key": "ctrl+shift+alt+cmd+cmd+a",
+    "command": "workbench.action.closeAuxiliaryBar",
+    "when": "sideBarVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+cmd+a",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closeAuxiliaryBar",
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    "when": "!sideBarVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+cmd+\\",
+    "command": "workbench.action.closeSidebar",
+    "when": "auxiliaryBarVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+cmd+\\",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closeSidebar",
+        "workbench.action.toggleAuxiliaryBar"
+      ]
+    },
+    "when": "!auxiliaryBarVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+m",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.toggleAuxiliaryBar"
+      ]
+    },
+    "when": "auxiliaryBarVisible && sideBarVisible || !auxiliaryBarVisible && !sideBarVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+m",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && !auxiliaryBarVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+m",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "auxiliaryBarVisible && !sideBarVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+o",
+    "command": "git.openAllChanges"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+u",
+    "command": "git.viewStagedChanges"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+;",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "command": "multiCommand.scmFocusMessage"
+    }
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+'",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "command": "multiCommand.scmFocusChanges"
+    }
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+c",
+    "command": "workbench.files.action.collapseExplorerFolders"
+  },
   // sugestions
   {
     "key": "enter",
@@ -778,30 +783,6 @@
     "when": "inSearchEditor"
   },
   // source control
-  {
-    "key": "cmd+;",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "list.focusFirst",
-        "list.select"
-      ]
-    },
-    "when": "activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus"
-  },
-  {
-    "key": "cmd+'",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "list.focusFirst",
-        "list.focusDown",
-        "list.focusDown",
-        "list.focusDown"
-      ]
-    },
-    "when": "activeAuxiliary == 'workbench.view.scm' && auxiliaryBarFocus"
-  },
   {
     "key": "ctrl+alt+cmd+enter",
     "command": "git.commitNoVerify",
@@ -1006,14 +987,5 @@
     "key": "ctrl+k",
     "command": "claude-code.insertAtMentioned",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "cmd+l",
-    "command": "expandLineSelection"
-  },
-  {
-    "key": "cmd+l",
-    "command": "-expandLineSelection",
-    "when": "textInputFocus"
   }
 ]
