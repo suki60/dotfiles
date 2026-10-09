@@ -9,6 +9,38 @@
     "command": "workbench.action.toggleAuxiliaryBar"
   },
   {
+    "key": "alt+cmd+a",
+    "command": "workbench.action.closeAuxiliaryBar",
+    "when": "sideBarVisible"
+  },
+  {
+    "key": "alt+cmd+a",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closeAuxiliaryBar",
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    "when": "!sideBarVisible"
+  },
+  {
+    "key": "alt+cmd+\\",
+    "command": "workbench.action.closeSidebar",
+    "when": "auxiliaryBarVisible"
+  },
+  {
+    "key": "alt+cmd+\\",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closeSidebar",
+        "workbench.action.toggleAuxiliaryBar"
+      ]
+    },
+    "when": "!auxiliaryBarVisible"
+  },
+  {
     "key": "ctrl+alt+cmd+\\",
     "command": "workbench.action.maximizeAuxiliaryBar",
     "when": "!auxiliaryBarMaximized"
@@ -965,5 +997,15 @@
     "key": "ctrl+`",
     "command": "agents.openSessionInVSCode",
     "when": "isSessionsWindow"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "claude-code.insertAtMentioned",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+k",
+    "command": "-claude-code.insertAtMentioned",
+    "when": "editorTextFocus"
   }
 ]
