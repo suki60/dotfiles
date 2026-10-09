@@ -319,10 +319,6 @@
     "command": "typescript.removeUnusedImports"
   },
   {
-    "key": "cmd+l",
-    "command": "workbench.action.editor.changeLanguageMode"
-  },
-  {
     "key": "cmd+;",
     "command": "editor.action.goToImplementation"
   },
@@ -685,6 +681,10 @@
     "command": "copyRelativeFilePath"
   },
   {
+    "key": "ctrl+l",
+    "command": "workbench.action.editor.changeLanguageMode"
+  },
+  {
     "key": "ctrl+p",
     "command": "copyFilePath"
   },
@@ -1006,5 +1006,14 @@
     "key": "ctrl+k",
     "command": "claude-code.insertAtMentioned",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "expandLineSelection"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
   }
 ]
