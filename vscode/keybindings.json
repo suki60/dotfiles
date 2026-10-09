@@ -475,7 +475,7 @@
     "key": "alt+l",
     "command": "editor.action.insertSnippet",
     "args": {
-      "snippet": "console.log($1)"
+      "snippet": "console.log($0)"
     },
     "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
   },
@@ -483,7 +483,7 @@
     "key": "shift+alt+l",
     "command": "editor.action.insertSnippet",
     "args": {
-      "snippet": "console.log('----------------------- $1 -----------------------')"
+      "snippet": "console.log('----------------------- $0 -----------------------')"
     },
     "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
   },
