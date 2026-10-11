@@ -32,7 +32,7 @@
   },
   {
     "key": "shift+cmd+c",
-    "command": "workbench.panel.chat"
+    "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
     "key": "shift+cmd+d",
@@ -169,6 +169,24 @@
   {
     "key": "shift+alt+cmd+backspace",
     "command": "git.clean"
+  },
+  {
+    "key": "shift+cmd+;",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "command": "multiCommand.scmFocusMessage"
+    }
+  },
+  {
+    "key": "shift+cmd+'",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "command": "multiCommand.scmFocusChanges"
+    }
+  },
+  {
+    "key": "ctrl+alt+cmd+t",
+    "command": "workbench.action.closeOtherEditors"
   },
   // editor actions
   {
@@ -572,10 +590,6 @@
     "command": "github.copilot.chat.completions.toggle"
   },
   {
-    "key": "ctrl+t",
-    "command": "workbench.action.closeOtherEditors"
-  },
-  {
     "key": "ctrl+f",
     "command": "revealFileInOS"
   },
@@ -651,7 +665,7 @@
     "command": "workbench.action.unpinEditor",
     "when": "activeEditorIsPinned"
   },
-// hyper actions
+  // hyper actions
   {
     "key": "ctrl+shift+alt+cmd+cmd+a",
     "command": "workbench.action.closeAuxiliaryBar",
@@ -712,24 +726,6 @@
   {
     "key": "ctrl+shift+alt+cmd+u",
     "command": "git.viewStagedChanges"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+;",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "command": "multiCommand.scmFocusMessage"
-    }
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+'",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "command": "multiCommand.scmFocusChanges"
-    }
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+c",
-    "command": "workbench.files.action.collapseExplorerFolders"
   },
   // sugestions
   {
@@ -982,10 +978,5 @@
     "key": "ctrl+`",
     "command": "agents.openSessionInVSCode",
     "when": "isSessionsWindow"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "claude-code.insertAtMentioned",
-    "when": "editorTextFocus"
   }
 ]
