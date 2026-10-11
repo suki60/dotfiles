@@ -135,10 +135,6 @@
     "command": "workbench.action.duplicateWorkspaceInNewWindow"
   },
   {
-    "key": "ctrl+alt+cmd+w",
-    "command": "workbench.action.closeWindow"
-  },
-  {
     "key": "ctrl+alt+cmd+l",
     "command": "workbench.action.reloadWindow"
   },
@@ -183,10 +179,6 @@
     "args": {
       "command": "multiCommand.scmFocusChanges"
     }
-  },
-  {
-    "key": "ctrl+alt+cmd+t",
-    "command": "workbench.action.closeOtherEditors"
   },
   // editor actions
   {
@@ -720,12 +712,34 @@
     "when": "auxiliaryBarVisible && !sideBarVisible"
   },
   {
+    "key": "ctrl+shift+alt+cmd+t",
+    "command": "workbench.action.closeOtherEditors"
+  },
+  {
     "key": "ctrl+shift+alt+cmd+o",
     "command": "git.openAllChanges"
   },
   {
     "key": "ctrl+shift+alt+cmd+u",
     "command": "git.viewStagedChanges"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+w",
+    "command": "workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+tab",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+`",
+    "command": "workbench.action.openAgentsWindow",
+    "when": "!isSessionsWindow"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+`",
+    "command": "agents.openSessionInVSCode",
+    "when": "isSessionsWindow"
   },
   // sugestions
   {
@@ -967,16 +981,5 @@
   {
     "key": "cmd+g ctrl+alt+cmd+w",
     "command": "git.deleteWorktree"
-  },
-  // agents
-  {
-    "key": "ctrl+`",
-    "command": "workbench.action.openAgentsWindow",
-    "when": "!isSessionsWindow"
-  },
-  {
-    "key": "ctrl+`",
-    "command": "agents.openSessionInVSCode",
-    "when": "isSessionsWindow"
   }
 ]
