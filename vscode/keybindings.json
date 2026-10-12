@@ -741,6 +741,10 @@
     "command": "agents.openSessionInVSCode",
     "when": "isSessionsWindow"
   },
+  {
+    "key": "ctrl+shift+alt+cmd+backspace",
+    "command": "workbench.action.files.revert"
+  },
   // sugestions
   {
     "key": "enter",
