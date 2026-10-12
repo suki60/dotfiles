@@ -60,6 +60,8 @@ alias ble="b lint --diagnostic-level error"
 alias blwo="b lint --diagnostic-level warn --only"
 alias bleo="b lint --diagnostic-level error --only"
 alias bf="b format"
+alias bc="b check"
+alias bcw="b check --write"
 
 # git
 alias g="git"
