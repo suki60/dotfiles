@@ -17,7 +17,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "opus",
+  "model": "sonnet",
   "worktree": {
     "bgIsolation": "none"
   },
