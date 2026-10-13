@@ -268,148 +268,12 @@
     "key": "alt+c",
     "command": "editor.action.insertSnippet",
     "args": {
-      "snippet": "const $1 = "
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+e",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "let $1 = "
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+y",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "type $1 = "
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+a",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "$1 = [$2]"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "shift+alt+a",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "const [$2] = $1"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+o",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "$1 = {$2}"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "shift+alt+o",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "const {$2} = $1"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+f",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "function $1($2) {$3}"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+.",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "$1 => $2"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "shift+alt+.",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "($1) => {$2}"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+r",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "return "
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+t",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "$1 ? $2 : "
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "shift+alt+f",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "if ($1) {$2}"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+,",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "<$1 />"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "shift+alt+,",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "<$1>$2</$1>"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+i",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "import $2 from '$1'"
-    },
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+x",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "export "
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "alt+u",
-    "command": "editor.action.insertSnippet",
-    "args": {
       "snippet": "'use client'"
     },
     "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
   },
   {
-    "key": "shift+alt+u",
+    "key": "alt+s",
     "command": "editor.action.insertSnippet",
     "args": {
       "snippet": "'use server'"
@@ -425,18 +289,10 @@
     "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
   },
   {
-    "key": "shift+alt+l",
+    "key": "alt+1",
     "command": "editor.action.insertSnippet",
     "args": {
       "snippet": "console.log('----------------------- $0 -----------------------')"
-    },
-    "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },
-  {
-    "key": "shift+space",
-    "command": "editor.action.insertSnippet",
-    "args": {
-      "snippet": "$0 "
     },
     "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
   },
@@ -446,27 +302,12 @@
     "when": "editorTextFocus && editorLangId == 'json' || editorTextFocus && editorLangId == 'jsonc'"
   },
   {
-    "key": "alt+/",
+    "key": "shift+space",
     "command": "editor.action.inlineSuggest.acceptNextWord",
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+alt+/",
-    "command": "editor.action.inlineSuggest.acceptNextLine",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+\\",
-    "command": "bracket-select.select",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "alt+'",
-    "command": "extension.selectEitherQuote",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+alt+'",
     "command": "bracketeer.removeQuotes",
     "when": "editorTextFocus"
   },
@@ -475,32 +316,12 @@
     "command": "bracketeer.changeQuotesTo"
   },
   {
-    "key": "alt+`",
-    "command": "extension.selectBackTick",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+9",
-    "command": "extension.selectParenthesis",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "alt+[",
-    "command": "extension.selectSquareBrackets",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+]",
-    "command": "extension.selectCurlyBrackets",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+alt+[",
     "command": "bracketeer.removeBrackets",
     "when": "editorTextFocus"
   },
   {
-    "key": "shift+alt+]",
+    "key": "ctrl+[",
     "command": "bracketeer.changeBracketsTo"
   },
   {
@@ -539,16 +360,6 @@
       ]
     },
     "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+tab",
-    "command": "jumpToNextSnippetPlaceholder",
-    "when": "hasNextTabstop && inSnippetMode && textInputFocus"
-  },
-  {
-    "key": "shift+alt+tab",
-    "command": "jumpToPrevSnippetPlaceholder",
-    "when": "hasPrevTabstop && inSnippetMode && textInputFocus"
   },
   // secondary actions
   {
@@ -616,24 +427,6 @@
   {
     "key": "ctrl+-",
     "command": "workbench.action.navigateBack"
-  },
-  {
-    "key": "ctrl+[",
-    "command": "workbench.action.moveEditorLeftInGroup"
-  },
-  {
-    "key": "ctrl+]",
-    "command": "workbench.action.moveEditorRightInGroup"
-  },
-  {
-    "key": "ctrl+\\",
-    "command": "workbench.action.pinEditor",
-    "when": "!activeEditorIsPinned"
-  },
-  {
-    "key": "ctrl+\\",
-    "command": "workbench.action.unpinEditor",
-    "when": "activeEditorIsPinned"
   },
   // hyper actions
   {
@@ -708,6 +501,24 @@
   {
     "key": "ctrl+shift+alt+cmd+backspace",
     "command": "workbench.action.files.revert"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+[",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+]",
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+\\",
+    "command": "workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+\\",
+    "command": "workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned"
   },
   // sugestions
   {
