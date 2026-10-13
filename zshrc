@@ -29,7 +29,7 @@ export BASH_DEFAULT_TIMEOUT_MS="7200000"
 export BASH_MAX_TIMEOUT_MS="7200000"
 
 # vscode
-alias c="code"
+alias c="code ."
 
 # npm
 alias n="npm"
