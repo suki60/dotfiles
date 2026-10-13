@@ -9,16 +9,6 @@
     "command": "workbench.action.toggleAuxiliaryBar"
   },
   {
-    "key": "ctrl+alt+cmd+\\",
-    "command": "workbench.action.maximizeAuxiliaryBar",
-    "when": "!auxiliaryBarMaximized"
-  },
-  {
-    "key": "ctrl+alt+cmd+\\",
-    "command": "workbench.action.restoreAuxiliaryBar",
-    "when": "auxiliaryBarMaximized"
-  },
-  {
     "key": "shift+cmd+b",
     "command": "workbench.action.toggleStatusbarVisibility"
   },
@@ -71,10 +61,6 @@
     "command": "workbench.action.togglePanel"
   },
   {
-    "key": "ctrl+alt+cmd+space",
-    "command": "workbench.action.toggleMaximizedPanel"
-  },
-  {
     "key": "shift+cmd+1",
     "command": "workbench.actions.view.problems"
   },
@@ -89,10 +75,6 @@
   {
     "key": "shift+cmd+4",
     "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "shift+cmd+5",
-    "command": "pw.extension.locatorsView.focus"
   },
   {
     "key": "shift+cmd+k",
@@ -129,10 +111,6 @@
   {
     "key": "shift+cmd+w",
     "command": "workbench.action.closeAllGroups"
-  },
-  {
-    "key": "ctrl+alt+cmd+n",
-    "command": "workbench.action.duplicateWorkspaceInNewWindow"
   },
   {
     "key": "ctrl+alt+cmd+l",
@@ -251,7 +229,7 @@
   },
   {
     "key": "cmd+l",
-    "command": "expandLineSelection",
+    "command": "expandLineSelection"
   },
   {
     "key": "cmd+;",
@@ -659,36 +637,18 @@
   },
   // hyper actions
   {
-    "key": "ctrl+shift+alt+cmd+cmd+a",
-    "command": "workbench.action.closeAuxiliaryBar",
-    "when": "sideBarVisible"
+    "key": "ctrl+shift+alt+cmd+\\",
+    "command": "workbench.action.maximizeAuxiliaryBar",
+    "when": "!auxiliaryBarMaximized"
   },
   {
-    "key": "ctrl+shift+alt+cmd+cmd+a",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.closeAuxiliaryBar",
-        "workbench.action.toggleSidebarVisibility"
-      ]
-    },
-    "when": "!sideBarVisible"
+    "key": "ctrl+shift+alt+cmd+\\",
+    "command": "workbench.action.restoreAuxiliaryBar",
+    "when": "auxiliaryBarMaximized"
   },
   {
-    "key": "ctrl+shift+alt+cmd+cmd+\\",
-    "command": "workbench.action.closeSidebar",
-    "when": "auxiliaryBarVisible"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+cmd+\\",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.closeSidebar",
-        "workbench.action.toggleAuxiliaryBar"
-      ]
-    },
-    "when": "!auxiliaryBarVisible"
+    "key": "ctrl+shift+alt+cmd+space",
+    "command": "workbench.action.toggleMaximizedPanel"
   },
   {
     "key": "ctrl+shift+alt+cmd+m",
@@ -710,6 +670,10 @@
     "key": "ctrl+shift+alt+cmd+m",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "auxiliaryBarVisible && !sideBarVisible"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+n",
+    "command": "workbench.action.duplicateWorkspaceInNewWindow"
   },
   {
     "key": "ctrl+shift+alt+cmd+t",
@@ -778,12 +742,6 @@
     "key": "shift+cmd+backspace",
     "command": "search.action.clearSearchResults",
     "when": "hasSearchResult && searchViewletFocus"
-  },
-  // find widget
-  {
-    "key": "cmd+r",
-    "command": "editor.action.startFindReplaceAction",
-    "when": "findWidgetVisible"
   },
   // search
   {
