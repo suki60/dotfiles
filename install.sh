@@ -31,6 +31,8 @@ VSCODE="$HOME/Library/Application Support/Code/User"
 link "$DOTFILES/vscode/settings.json"    "$VSCODE/settings.json"
 link "$DOTFILES/vscode/keybindings.json" "$VSCODE/keybindings.json"
 link "$DOTFILES/vscode/tasks.json"       "$VSCODE/tasks.json"
+link "$DOTFILES/global.code-snippets"    "$VSCODE/snippets/global.code-snippets"
+xargs -n1 code --install-extension < "$DOTFILES/vscode/extensions"
 
 echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
