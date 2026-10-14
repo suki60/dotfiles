@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # List Claude Code sessions for the current folder by title.
-#   enter → resume the selected session   n → start a new chat in this folder   c → open its file in VS Code   p → open project folder in VS Code   x → delete it (asks to confirm)
+#   enter → resume the selected session   n → start a new chat in this folder   c → open its file in VS Code   p → open project folder in VS Code   x → delete it
 #   ↑/↓ to move, q/esc to quit
 set -euo pipefail
 
@@ -50,13 +50,8 @@ while true; do
       code "${targets[@]}" ;;
     p) code "$PROJ" ;;
     x)
-      title="${line##*$'\t'}"
-      read -r -p "Delete \"$title\"? [y/N] " ans
-      if [[ "$ans" == [yY] ]]; then
-        rm -f "$PROJ/$id.jsonl"
-        rm -rf "$PROJ/$id" "$HOME/.claude/session-env/$id" "$HOME/.claude/file-history/$id"
-        echo "deleted $id"
-      fi
+      rm -f "$PROJ/$id.jsonl"
+      rm -rf "$PROJ/$id" "$HOME/.claude/session-env/$id" "$HOME/.claude/file-history/$id"
       ;;
   esac
 done
