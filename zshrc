@@ -11,7 +11,6 @@ alias dl="cd ~/Downloads"
 alias doc="cd ~/Documents"
 alias wk="cd ~/Documents/work"
 alias box="cd ~/Documents/box"
-alias pg="cd ~/Documents/playground"
 alias rep="cd ~/Documents/repos"
 
 # repos
@@ -19,6 +18,9 @@ alias dot="cd ~/Documents/repos/dotfiles"
 alias pf="cd ~/Documents/repos/portfolio"
 alias cv="cd ~/Documents/repos/cv"
 alias wed="cd ~/Documents/repos/wedding"
+
+# brew
+alias bu="brew update && brew upgrade && brew cleanup"
 
 # claude
 alias k="claude"
@@ -34,48 +36,17 @@ export BASH_MAX_TIMEOUT_MS="7200000"
 # vscode
 alias c="code ."
 
-# npm
-alias n="npm"
-alias ni="n i"
-alias nr="n run"
-alias nrd="nr dev"
+# ni
 alias nrs="nr start"
 alias nrb="nr build"
-
-# pnpm
-alias p="pnpm"
-alias pr="p run"
-
-# yarn
-alias y="yarn"
-alias yr="y run"
-
-# vercel
-alias v="vercel"
-
-# biome
-alias b="biome"
+alias b="nr biome"
 alias bl="b lint"
-alias blo="b lint --only"
-alias bll="b lint --diagnostic-level"
-alias blw="b lint --diagnostic-level warn"
-alias ble="b lint --diagnostic-level error"
-alias blwo="b lint --diagnostic-level warn --only"
-alias bleo="b lint --diagnostic-level error --only"
 alias bf="b format"
 alias bc="b check"
 alias bcw="b check --write"
 
-# git
-alias g="git"
-alias gc="git checkout"
-alias gf="git fetch"
-alias gb="git rebase -i"
-alias gbm="git rebase -i origin/main"
-alias gr="git reset --hard"
-alias grm="git reset --hard origin/main"
-alias gcp="git cherry-pick"
-alias gcl="git clone"
+# vercel
+alias v="vercel"
 
 # docker 
 alias d="docker"
@@ -102,12 +73,10 @@ m () {
         rm -f -- "$NNN_TMPFILE" > /dev/null
     }
 }
+
 export NNN_PLUG='c:vscode;z:zed;f:finder;p:pbcopy;k:claude'
 BLK="04" CHR="04" DIR="04" EXE="00" REG="00" HARDLINK="00" SYMLINK="06" MISSING="00" ORPHAN="01" FIFO="0F" SOCK="0F" OTHER="02"
 export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
-
-# local bin
-export PATH="$HOME/.local/bin:$PATH"
 
 # zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
