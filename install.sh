@@ -20,6 +20,13 @@ link() {
 echo "Dotfiles: $DOTFILES"
 echo ""
 
+echo "→ Homebrew"
+if command -v brew >/dev/null; then
+  brew bundle --file="$DOTFILES/Brewfile"
+else
+  echo "  skip  brew not installed"
+fi
+
 echo "→ Shell"
 link "$DOTFILES/zshrc"       "$HOME/.zshrc"
 
