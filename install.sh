@@ -21,10 +21,18 @@ echo "Dotfiles: $DOTFILES"
 echo ""
 
 echo "→ Homebrew"
-if command -v brew >/dev/null; then
-  brew bundle --file="$DOTFILES/Brewfile"
+command -v brew >/dev/null || { echo "  error brew not installed"; exit 1; }
+brew bundle --file="$DOTFILES/Brewfile"
+
+echo "→ Node"
+fnm install --lts
+fnm default lts-latest
+eval "$(fnm env --shell bash)"
+
+if command -v ni >/dev/null; then
+  echo "  skip  ni"
 else
-  echo "  skip  brew not installed"
+  npm i -g @antfu/ni
 fi
 
 echo "→ Shell"
