@@ -1,4 +1,3 @@
-brew "biome"
 brew "fnm"
 brew "fzf"
 brew "nnn"
