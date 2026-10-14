@@ -20,21 +20,6 @@ link() {
 echo "Dotfiles: $DOTFILES"
 echo ""
 
-echo "→ Homebrew"
-command -v brew >/dev/null || { echo "  error brew not installed"; exit 1; }
-brew bundle --file="$DOTFILES/Brewfile"
-
-echo "→ Node"
-fnm install --lts
-fnm default lts-latest
-eval "$(fnm env --shell bash)"
-
-if command -v ni >/dev/null; then
-  echo "  skip  ni"
-else
-  npm i -g @antfu/ni
-fi
-
 echo "→ Shell"
 link "$DOTFILES/zshrc"       "$HOME/.zshrc"
 
@@ -67,6 +52,17 @@ SCRIPTS="$HOME/.scripts"
 for script in "$DOTFILES"/raycast/scripts/*; do
   link "$script" "$SCRIPTS/$(basename "$script")"
 done
+
+echo "→ Node"
+fnm install --lts
+fnm default lts-latest
+eval "$(fnm env --shell bash)"
+
+if command -v ni >/dev/null; then
+  echo "  skip  ni"
+else
+  npm i -g @antfu/ni
+fi
 
 echo ""
 echo "Done."
