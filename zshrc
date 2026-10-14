@@ -78,9 +78,8 @@ alias gcl="git clone"
 alias d="docker"
 alias dc="docker compose"
 
-# nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # nnn
 m () {
@@ -106,18 +105,6 @@ export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SO
 
 # local bin
 export PATH="$HOME/.local/bin:$PATH"
-
-# helpers
-cm() {
-  local encoded=$(pwd | sed 's|/|-|g')
-  local memory_dir="$HOME/.claude/projects/${encoded}/memory"
-  if [ -d "$memory_dir" ]; then
-    code "$memory_dir"
-  else
-    echo "No memory directory found for: $(pwd)"
-    echo "Expected: $memory_dir"
-  fi
-}
 
 # zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
