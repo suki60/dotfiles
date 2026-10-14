@@ -32,7 +32,17 @@ link "$DOTFILES/vscode/settings.json"    "$VSCODE/settings.json"
 link "$DOTFILES/vscode/keybindings.json" "$VSCODE/keybindings.json"
 link "$DOTFILES/vscode/tasks.json"       "$VSCODE/tasks.json"
 link "$DOTFILES/global.code-snippets"    "$VSCODE/snippets/global.code-snippets"
-xargs -n1 code --install-extension < "$DOTFILES/vscode/extensions"
+
+installed="$(code --list-extensions)"
+added=0
+
+while read -r ext; do
+  grep -qix "$ext" <<<"$installed" && continue
+  code --install-extension "$ext"
+  added=1
+done < "$DOTFILES/vscode/extensions"
+
+[[ $added -eq 1 ]] || echo "  skip  extensions (all installed)"
 
 echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
@@ -56,7 +66,12 @@ for script in "$DOTFILES"/raycast/scripts/*; do
 done
 
 echo "→ Node"
-fnm install --lts
+node_out="$(fnm install --lts 2>&1)" || { echo "$node_out"; exit 1; }
+if grep -q "already installed" <<<"$node_out"; then
+  echo "  skip  node (latest LTS already installed)"
+else
+  echo "$node_out"
+fi
 fnm default lts-latest
 eval "$(fnm env --shell bash)"
 
