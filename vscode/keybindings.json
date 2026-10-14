@@ -335,6 +335,16 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "key": "alt+\\",
+    "command": "workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
+  },
+  {
+    "key": "alt+\\",
+    "command": "workbench.action.unpinEditor",
+    "when": "activeEditorIsPinned"
+  },
+  {
     "key": "shift+enter",
     "command": "editor.action.insertLineBefore",
     "when": "editorTextFocus && !editorReadonly"
@@ -521,14 +531,14 @@
     "command": "workbench.action.moveEditorRightInGroup"
   },
   {
-    "key": "ctrl+shift+alt+cmd+\\",
-    "command": "workbench.action.pinEditor",
-    "when": "!activeEditorIsPinned"
+    "key": "ctrl+left",
+    "command": "cursorWordPartLeft",
+    "when": "textInputFocus"
   },
   {
-    "key": "ctrl+shift+alt+cmd+\\",
-    "command": "workbench.action.unpinEditor",
-    "when": "activeEditorIsPinned"
+    "key": "ctrl+right",
+    "command": "cursorWordPartRight",
+    "when": "textInputFocus"
   },
   // sugestions
   {
