@@ -1,6 +1,3 @@
 #!/bin/sh
-if [ -d "$nnn" ]; then
-    cd "$nnn" && claude
-else
-    cd "$(dirname "$nnn")" && claude
-fi
+# Open claude in the directory nnn is currently showing (not the selected entry)
+claude

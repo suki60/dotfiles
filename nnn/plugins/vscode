@@ -1,6 +1,3 @@
 #!/bin/sh
-if [ -d "$nnn" ]; then
-    code "$nnn"
-else
-    code "$(dirname "$nnn")"
-fi
+# Open VS Code in the directory nnn is currently showing (not the selected entry)
+code "$PWD"
