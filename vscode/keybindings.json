@@ -335,6 +335,10 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "key": "alt+k",
+    "command": "claude-vscode.insertAtMention"
+  },
+  {
     "key": "alt+\\",
     "command": "workbench.action.pinEditor",
     "when": "!activeEditorIsPinned"
