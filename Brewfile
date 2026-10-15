@@ -6,7 +6,7 @@ brew "zsh-autosuggestions"
 
 cask "appcleaner"
 cask "claude"
-cask "claude-code@latest"
+cask "claude-code"
 cask "docker-desktop"
 cask "ghostty"
 cask "google-chrome"
