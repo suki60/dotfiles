@@ -21,6 +21,7 @@ alias wed="cd ~/Documents/repos/wedding"
 
 # brew
 alias bu="brew update && brew upgrade && brew cleanup"
+export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
 
 # claude
 alias k="claude"
