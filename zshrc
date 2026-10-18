@@ -38,9 +38,10 @@ export BASH_MAX_TIMEOUT_MS="7200000"
 alias c="code ."
 
 # ni
+alias nx="nlx"
 alias nrs="nr start"
-alias nrb="nr build"
-alias b="nr biome"
+alias nrb="nx build"
+alias b="nx biome"
 alias bl="b lint"
 alias bf="b format"
 alias bc="b check"
