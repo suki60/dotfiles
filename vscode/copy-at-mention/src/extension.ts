@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
       const endLine = end.line + 1 - (!editor.selection.isEmpty && end.character === 0 && end.line > start.line ? 1 : 0)
 
       const range = startLine === endLine ? `${startLine}` : `${startLine}-${endLine}`
-      const mention = `@${path}#${range}`
+      const mention = editor.selection.isEmpty ? `@${path}` : `@${path}#${range}`
 
       await vscode.env.clipboard.writeText(mention)
       vscode.window.setStatusBarMessage(`Copied ${mention}`, 2000)
