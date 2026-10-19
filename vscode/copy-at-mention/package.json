@@ -1,0 +1,21 @@
+{
+  "name": "copy-at-mention",
+  "displayName": "Copy At Mention",
+  "publisher": "suki60",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.90.0" },
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      { "command": "copyAtMention.copy", "title": "Copy @file#lines mention" }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.0"
+  }
+}

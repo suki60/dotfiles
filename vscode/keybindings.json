@@ -379,6 +379,11 @@
     "command": "claude-vscode.insertAtMention"
   },
   {
+    "key": "ctrl+k",
+    "command": "copyAtMention.copy",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "shift+enter",
     "command": "editor.action.insertLineBefore",
     "when": "editorTextFocus && !editorReadonly"
