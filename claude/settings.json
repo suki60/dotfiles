@@ -1,4 +1,7 @@
 {
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
   "permissions": {
     "deny": [
       "Bash(git commit*)",
@@ -39,7 +42,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "sonnet",
+  "model": "opus",
   "worktree": {
     "bgIsolation": "none"
   },
@@ -52,8 +55,5 @@
   "awaySummaryEnabled": false,
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
-  "autoUpdates": false,
-  "env": {
-    "DISABLE_AUTOUPDATER": "1"
-  }
+  "autoUpdates": false
 }
