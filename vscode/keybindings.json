@@ -57,6 +57,10 @@
     "command": "prStatus:github.focus"
   },
   {
+    "key": "ctrl+shift+alt+cmd+x",
+    "command": "hexEditor.openFile"
+  },
+  {
     "key": "shift+cmd+space",
     "command": "workbench.action.togglePanel"
   },
