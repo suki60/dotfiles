@@ -756,7 +756,7 @@
     "command": "git.stashDropAll"
   },
   {
-    "key": "cmd+g cmd+enter",
+    "key": "cmd+g shift+cmd+enter",
     "command": "git.commit"
   },
   {
@@ -764,7 +764,7 @@
     "command": "git.commitNoVerify"
   },
   {
-    "key": "cmd+g cmd+backspace",
+    "key": "cmd+g shift+cmd+backspace",
     "command": "git.undoCommit"
   },
   {
@@ -796,12 +796,16 @@
     "command": "git.viewHistory"
   },
   {
-    "key": "cmd+g shift+cmd+enter",
+    "key": "cmd+g cmd+enter",
     "command": "git.stageAll"
   },
   {
-    "key": "cmd+g shift+cmd+backspace",
+    "key": "cmd+g cmd+backspace",
     "command": "git.unstageAll"
+  },
+  {
+    "key": "cmd+g alt+cmd+backspace",
+    "command": "git.cleanAll"
   },
   {
     "key": "cmd+g shift+alt+cmd+backspace",
