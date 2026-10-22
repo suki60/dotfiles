@@ -33,7 +33,6 @@
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "biome.enabled": false,
-  "bookmarks.sideBar.countBadge": "off",
   "chat.fontSize": 14,
   "chat.titleBar.openInAgentsWindow.enabled": false,
   "claudeCode.allowDangerouslySkipPermissions": true,
@@ -103,9 +102,6 @@
     "scminput": false
   },
   "github.copilot.nextEditSuggestions.enabled": true,
-  "gopls": {
-    "ui.navigation.importShortcut": "Definition"
-  },
   "js/ts.format.semicolons": "remove",
   "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "js/ts.preferGoToSourceDefinition": true,
@@ -156,6 +152,7 @@
   "tailwindCSS.lint.suggestCanonicalClasses": "ignore",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontWeightBold": "normal",
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "args": [
