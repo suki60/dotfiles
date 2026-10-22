@@ -208,6 +208,10 @@
     "command": "git.openFile"
   },
   {
+    "key": "cmd+k",
+    "command": "copyAtMention.copy"
+  },
+  {
     "key": "cmd+f",
     "command": "actions.find"
   },
@@ -381,11 +385,6 @@
   {
     "key": "alt+k",
     "command": "claude-vscode.insertAtMention"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "copyAtMention.copy",
-    "when": "editorTextFocus"
   },
   {
     "key": "shift+enter",
