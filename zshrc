@@ -29,6 +29,11 @@ gr() {
   git commit --fixup="$1" && GIT_SEQUENCE_EDITOR=true git rebase -i --autostash --autosquash "$1~1"
 }
 
+gc() {
+  gh repo list "$1" --limit 500 --json nameWithOwner -q '.[].nameWithOwner' \
+    | fzf | xargs -r gh repo clone
+}
+
 # claude
 alias k="claude"
 alias kp="k -p"
