@@ -81,5 +81,11 @@ else
   npm i -g @antfu/ni
 fi
 
+echo "→ VSCode local extensions"
+for pkg in "$DOTFILES"/vscode/*/package.json; do
+  id="$(node -p "const p = require('$pkg'); p.publisher + '.' + p.name + '-' + p.version")"
+  link "$(dirname "$pkg")" "$HOME/.vscode/extensions/$id"
+done
+
 echo ""
 echo "Done."
