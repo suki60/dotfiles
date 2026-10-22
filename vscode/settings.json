@@ -34,6 +34,7 @@
   },
   "biome.enabled": false,
   "chat.fontSize": 14,
+  "chat.tips.enabled": false,
   "chat.titleBar.openInAgentsWindow.enabled": false,
   "claudeCode.allowDangerouslySkipPermissions": true,
   "claudeCode.enableNewConversationShortcut": true,
