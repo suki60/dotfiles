@@ -7,7 +7,11 @@ export function activate(context: vscode.ExtensionContext) {
       if (!editor) return
 
       const { start, end } = editor.selection
-      const path = vscode.workspace.asRelativePath(editor.document.uri, false)
+      // diff editors show the original side as a git: (or similar) uri, which
+      // asRelativePath can't match to a workspace folder, so map it back to file:
+      const { uri } = editor.document
+      const fileUri = uri.scheme === "file" ? uri : vscode.Uri.file(uri.fsPath)
+      const path = vscode.workspace.asRelativePath(fileUri, false)
 
       // a selection ending at column 0 of a later line doesn't include that line
       const startLine = start.line + 1
