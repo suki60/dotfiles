@@ -20,7 +20,7 @@ if ! pgrep -xq "Docker Desktop"; then
   exit 0
 fi
 
-osascript <<'APPLESCRIPT'
+osascript >/dev/null <<'APPLESCRIPT'
 tell application "System Events"
   tell process "Docker Desktop"
     if frontmost and visible and (count of windows) > 0 then

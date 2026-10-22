@@ -43,4 +43,3 @@ if [ ! -d "$target" ]; then
 fi
 
 "$code_bin" "$target"
-echo "Opened $target"

@@ -63,7 +63,7 @@ EOF
 # hotkey its modifiers may still be held, turning Cmd+V into another shortcut,
 # so wait (up to 2s) until shift/ctrl/option/cmd are all released
 sleep 0.1
-osascript -l JavaScript <<'JXA'
+osascript -l JavaScript >/dev/null <<'JXA'
 ObjC.import("AppKit");
 const MODIFIERS = 0x1e0000; // shift | control | option | command
 for (let i = 0; i < 100 && (Number($.NSEvent.modifierFlags) & MODIFIERS); i++) {
@@ -71,4 +71,3 @@ for (let i = 0; i < 100 && (Number($.NSEvent.modifierFlags) & MODIFIERS); i++) {
 }
 Application("System Events").keystroke("v", { using: "command down" });
 JXA
-echo "Pasted"
