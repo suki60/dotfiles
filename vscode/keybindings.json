@@ -303,7 +303,7 @@
       "snippet": "debugger"
     },
     "when": "editorTextFocus && !editorReadonly && (resourceLangId == javascript || resourceLangId == typescript || resourceLangId == javascriptreact || resourceLangId == typescriptreact)"
-  },  
+  },
   {
     "key": "alt+.",
     "command": "editor.action.insertSnippet",
@@ -448,6 +448,10 @@
   {
     "key": "ctrl+shift+o",
     "command": "git-graph.openFile"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "selectWord.select"
   },
   {
     "key": "ctrl+c",

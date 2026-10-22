@@ -1,0 +1,21 @@
+{
+  "name": "select-whole-word",
+  "displayName": "Select Whole Word",
+  "publisher": "suki60",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.90.0" },
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      { "command": "selectWord.select", "title": "Select whole word (up to whitespace or comma)" }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.0"
+  }
+}
