@@ -168,6 +168,7 @@
   "update.showReleaseNotes": false,
   "window.commandCenter": false,
   "window.confirmSaveUntitledWorkspace": false,
+  "window.newWindowDimensions": "maximized",
   "workbench.activityBar.location": "top",
   "workbench.browser.showInTitleBar": false,
   "workbench.colorTheme": "One Dark Pro",
