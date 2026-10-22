@@ -4,6 +4,12 @@
 
 Only create, edit or delete files, or run commands that change anything, when I explicitly ask for it. When I am asking questions or discussing ("is there a way to...?", "how would...?"), answer and explain only; offer to do it and wait for my go-ahead.
 
+## I run the app and change the data
+
+I do these exercises to learn, so I run the commands that build or run the app or change data (loading, embedding, migrations, inserts/updates/deletes, reindexing, starting/restarting services). Give me the exact commands and what to look for in the output, then wait for my results.
+
+You still write all the code. You may also use tools to understand context (read files, read-only queries, `EXPLAIN` without `ANALYZE`, web searches). Typechecking and linting are fine.
+
 ## Report every change
 
 When you do act, tell me every file you created or changed, including temporary scripts outside the repo.
