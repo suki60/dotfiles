@@ -24,6 +24,11 @@ alias bu="brew update && brew upgrade && brew cleanup"
 export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
 export HOMEBREW_NO_ENV_HINTS=1
 
+# git
+gr() {
+  git commit --fixup="$1" && GIT_SEQUENCE_EDITOR=true git rebase -i --autostash --autosquash "$1~1"
+}
+
 # claude
 alias k="claude"
 alias kp="k -p"
