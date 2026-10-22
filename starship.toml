@@ -1,3 +1,7 @@
 # Hide the package version (from our previous step)
 [package]
 disabled = true
+
+# Hide the git status indicators ([!], [$], etc.)
+[git_status]
+disabled = true
