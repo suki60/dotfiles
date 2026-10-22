@@ -164,6 +164,10 @@
   },
   // editor actions
   {
+    "key": "cmd+`",
+    "command": "workbench.action.quickSwitchWindow"
+  },
+  {
     "key": "cmd+1",
     "command": "workbench.action.openEditorAtIndex1"
   },
