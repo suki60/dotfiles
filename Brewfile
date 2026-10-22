@@ -1,5 +1,6 @@
 brew "fnm"
 brew "fzf"
+brew "gh"
 brew "nnn"
 brew "starship"
 brew "zsh-autosuggestions"
