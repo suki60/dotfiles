@@ -102,7 +102,6 @@ copy-last-output() {
 zle -N copy-last-output
 bindkey '^[a' copy-last-output
 
-# Clear the input line and any zle message below it.
 clear-line-and-message() {
   zle kill-whole-line
   zle -M ""
@@ -110,6 +109,26 @@ clear-line-and-message() {
 
 zle -N clear-line-and-message
 bindkey '^U' clear-line-and-message
+
+run-and-copy-output() {
+  [[ -z $BUFFER ]] && return
+  _copy_output_cmd=$BUFFER
+  BUFFER="{ $BUFFER; } |& tee >(pbcopy)"
+  zle accept-line
+}
+
+# Save the original command to history instead of the tee wrapper.
+_copy_output_history() {
+  [[ -z $_copy_output_cmd ]] && return 0
+  print -s -- "$_copy_output_cmd"
+  unset _copy_output_cmd
+  return 1
+}
+
+zle -N run-and-copy-output
+bindkey '^[^M' run-and-copy-output
+autoload -Uz add-zsh-hook
+add-zsh-hook zshaddhistory _copy_output_history
 
 # zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh

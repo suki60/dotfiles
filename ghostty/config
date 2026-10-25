@@ -22,5 +22,9 @@ shell-integration = zsh
 copy-on-select = true
 confirm-close-surface = false
 
+# keybinds
+# Send Alt+Enter so zsh runs run-and-copy-output (replaces the default fullscreen toggle).
+keybind = cmd+enter=text:\x1b\r
+
 # macOS
 macos-option-as-alt = true
