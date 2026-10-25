@@ -91,7 +91,8 @@ export NNN_PLUG='c:vscode;z:zed;f:finder;p:pbcopy;k:claude'
 BLK="04" CHR="04" DIR="04" EXE="00" REG="00" HARDLINK="00" SYMLINK="06" MISSING="00" ORPHAN="01" FIFO="0F" SOCK="0F" OTHER="02"
 export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
 
-# keybindings
+# zsh
+alias szsh="source ~/.zshrc"
 copy-last-output() {
   local cmd=$(fc -ln -1)
   eval "$cmd" 2>&1 | pbcopy
@@ -100,6 +101,15 @@ copy-last-output() {
 
 zle -N copy-last-output
 bindkey '^[a' copy-last-output
+
+# Clear the input line and any zle message below it.
+clear-line-and-message() {
+  zle kill-whole-line
+  zle -M ""
+}
+
+zle -N clear-line-and-message
+bindkey '^U' clear-line-and-message
 
 # zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
