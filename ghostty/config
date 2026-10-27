@@ -25,6 +25,8 @@ confirm-close-surface = false
 # keybinds
 # Send Alt+Enter so zsh runs run-and-copy-output (replaces the default fullscreen toggle).
 keybind = cmd+enter=text:\x1b\r
+# Send Ctrl+_ so zsh undoes the last line edit.
+keybind = cmd+z=text:\x1f
 
 # macOS
 macos-option-as-alt = true
