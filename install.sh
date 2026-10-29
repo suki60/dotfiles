@@ -48,6 +48,11 @@ echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
 link "$DOTFILES/claude/CLAUDE.md"     "$HOME/.claude/CLAUDE.md"
 
+for skill in "$DOTFILES"/claude/skills/*/; do
+  skill="${skill%/}"
+  link "$skill" "$HOME/.claude/skills/$(basename "$skill")"
+done
+
 echo "→ Ghostty"
 link "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
 
