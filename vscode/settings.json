@@ -171,6 +171,7 @@
   "window.confirmSaveUntitledWorkspace": false,
   "window.newWindowDimensions": "maximized",
   "workbench.activityBar.location": "top",
+  "workbench.browser.openLocalhostLinks": false,
   "workbench.browser.showInTitleBar": false,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.defaultBinaryEditor": "default",
