@@ -34,6 +34,7 @@ gc() {
   gh repo list "$1" --limit 500 --json nameWithOwner -q '.[].nameWithOwner' \
     | fzf | xargs -r gh repo clone
 }
+alias gp="git pull"
 
 # claude
 alias k="claude"
