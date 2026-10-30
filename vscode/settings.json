@@ -185,6 +185,7 @@
   },
   "workbench.iconTheme": "file-icons",
   "workbench.layoutControl.enabled": false,
+  "workbench.panel.showLabels": false,
   "workbench.startupEditor": "none",
   "zenMode.fullScreen": false
 }
