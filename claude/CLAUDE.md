@@ -50,6 +50,8 @@ const db = await connect();
 // Rows in the full Simple English dump, for the estimate.
 const FULL_DATASET_ARTICLES = 241_787;
 
+let done = 0;
+
 while (true) {
   const { rows } = await db.query(
     "SELECT id, content FROM chunks WHERE embedding IS NULL LIMIT $1",
