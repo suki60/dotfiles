@@ -78,6 +78,10 @@ if (done > 0) {
 
 Plain shell tools (grep, ls, curl, jq-style one-liners) are still fine when a script would be overkill.
 
+## Explain visually when it helps
+
+I learn best from pictures. When an explanation involves flow, structure, steps or a comparison, add an ASCII diagram in a fenced code block, drawn the way my `/v` skill describes (boxes, arrows, real names from the code, lines under ~75 characters). Skip it for short factual answers where a picture adds nothing.
+
 ## Be concise
 
 Keep responses short and to the point. Lead with the answer, then add only the context needed to act on it.
