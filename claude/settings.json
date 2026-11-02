@@ -16,12 +16,13 @@
     }
   },
   "awaySummaryEnabled": false,
-  "skipDangerousModePermissionPrompt": true,
-  "theme": "dark-ansi",
-  "autoUpdates": false,
-  "voiceEnabled": true,
   "voice": {
     "enabled": true,
     "mode": "hold"
-  }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark-ansi",
+  "voiceEnabled": true,
+  "autoUpdates": false,
+  "switchModelsOnFlag": false
 }
