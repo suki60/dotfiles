@@ -92,5 +92,19 @@ for pkg in "$DOTFILES"/vscode/*/package.json; do
   link "$(dirname "$pkg")" "$HOME/.vscode/extensions/$id"
 done
 
+echo "→ macOS"
+
+# Free ⌘M: no menu item claims it, so it never minimizes.
+defaults write -g NSUserKeyEquivalents -dict-add "Minimize" "\0"
+
+# Hide the Dock for good: auto-hide with a 1000s reveal delay.
+if [[ "$(defaults read com.apple.dock autohide-delay 2>/dev/null)" == "1000" ]]; then
+  echo "  skip  dock (already hidden)"
+else
+  defaults write com.apple.dock autohide -bool true
+  defaults write com.apple.dock autohide-delay -float 1000
+  killall Dock
+fi
+
 echo ""
 echo "Done."
