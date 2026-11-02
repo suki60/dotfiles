@@ -36,6 +36,16 @@ gc() {
 }
 alias gp="git pull"
 
+# repos: pick one with fzf and cd into it
+cr() {
+  local root="$HOME/Documents/repos"
+  local repo
+
+  repo="$(find "$root" -mindepth 1 -maxdepth 1 -type d -not -name '.*' -exec basename {} \; \
+    | sort -f | fzf --reverse --prompt='repo> ' --query="$1" --select-1)" || return
+  cd "$root/$repo"
+}
+
 # claude
 alias k="claude"
 alias kp="k -p"
