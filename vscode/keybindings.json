@@ -464,7 +464,6 @@
   {
     "key": "ctrl+x",
     "command": "copy-file-name.copyFileNameWithExtension",
-    "when": "editorTextFocus"
   },
   {
     "key": "ctrl+r",
