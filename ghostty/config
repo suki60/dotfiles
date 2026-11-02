@@ -33,7 +33,7 @@ keybind = alt+cmd+[=equalize_splits
 # New split on the right, already at ~1/3 of the window
 keybind = alt+cmd+d=new_split:right
 keybind = chain=equalize_splits
-keybind = chain=resize_split:right,267
+keybind = chain=resize_split:right,406
 
 # macOS
 macos-option-as-alt = true
