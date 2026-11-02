@@ -85,6 +85,8 @@ I learn best from pictures. When an explanation involves flow, structure, steps 
 
 Draw tables with full borders (`┌─┬─┐`, `│` between columns, `├─┼─┤` between rows, `└─┴─┘`) whenever a cell wraps onto more than one line, so it's clear which text belongs to which cell.
 
+When I write "X vs Y", answer with a side-by-side comparison: a bordered table of the differences that matter, plus a diagram if they differ in flow or structure. End with when to pick each.
+
 ## Be concise
 
 Keep responses short and to the point. Lead with the answer, then add only the context needed to act on it.
