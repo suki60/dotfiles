@@ -18,5 +18,10 @@
   "awaySummaryEnabled": false,
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
-  "autoUpdates": false
+  "autoUpdates": false,
+  "voiceEnabled": true,
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  }
 }
