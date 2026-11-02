@@ -57,8 +57,15 @@ alias ks="$HOME/Documents/repos/dotfiles/bin/ksessions"
 export BASH_DEFAULT_TIMEOUT_MS="7200000"
 export BASH_MAX_TIMEOUT_MS="7200000"
 
-# vscode
-alias c="code ."
+# vscode: open the given path, or the current folder
+c() {
+  code "${@:-.}"
+}
+
+# finder: open the given path, or the current folder
+f() {
+  open "${@:-.}"
+}
 
 # ni
 alias nx="nlx"
