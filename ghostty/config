@@ -25,6 +25,15 @@ confirm-close-surface = false
 keybind = cmd+enter=text:\x1b\r
 # Send Ctrl+_ so zsh undoes the last line edit.
 keybind = cmd+z=text:\x1f
+# Shrink the split to ~1/3: reset to 50/50 first so repeated presses land on the same size
+keybind = alt+cmd+]=equalize_splits
+keybind = chain=resize_split:right,267
+# Back to 50/50
+keybind = alt+cmd+[=equalize_splits
+# New split on the right, already at ~1/3 of the window
+keybind = alt+cmd+d=new_split:right
+keybind = chain=equalize_splits
+keybind = chain=resize_split:right,267
 
 # macOS
 macos-option-as-alt = true
