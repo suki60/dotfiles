@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
+
+# Stop on any error, unset variable or failed pipe.
 set -euo pipefail
 
+# Absolute path of this repo, wherever the script is run from.
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# Symlink src → dst, skipping it if the link already points there.
 link() {
   local src="$1"
   local dst="$2"
@@ -20,12 +24,15 @@ link() {
 echo "Dotfiles: $DOTFILES"
 echo ""
 
+# zsh config.
 echo "→ Shell"
 link "$DOTFILES/zshrc"       "$HOME/.zshrc"
 
+# Prompt theme.
 echo "→ Starship"
 link "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
 
+# Editor settings, keybindings, tasks and snippets.
 echo "→ VSCode"
 VSCODE="$HOME/Library/Application Support/Code/User"
 link "$DOTFILES/vscode/settings.json"    "$VSCODE/settings.json"
@@ -33,6 +40,7 @@ link "$DOTFILES/vscode/keybindings.json" "$VSCODE/keybindings.json"
 link "$DOTFILES/vscode/tasks.json"       "$VSCODE/tasks.json"
 link "$DOTFILES/global.code-snippets"    "$VSCODE/snippets/global.code-snippets"
 
+# Install each extension listed in vscode/extensions that's missing.
 installed="$(code --list-extensions)"
 added=0
 
@@ -44,6 +52,7 @@ done < "$DOTFILES/vscode/extensions"
 
 [[ $added -eq 1 ]] || echo "  skip  extensions (all installed)"
 
+# Claude Code settings, global instructions and skills.
 echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
 link "$DOTFILES/claude/CLAUDE.md"     "$HOME/.claude/CLAUDE.md"
@@ -53,9 +62,11 @@ for skill in "$DOTFILES"/claude/skills/*/; do
   link "$skill" "$HOME/.claude/skills/$(basename "$skill")"
 done
 
+# Terminal config.
 echo "→ Ghostty"
 link "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
 
+# File manager plugins.
 echo "→ nnn"
 NNN_PLUGINS="$HOME/.config/nnn/plugins"
 
@@ -63,6 +74,7 @@ for plugin in "$DOTFILES"/nnn/plugins/*; do
   link "$plugin" "$NNN_PLUGINS/$(basename "$plugin")"
 done
 
+# Script commands, read by Raycast from ~/.scripts.
 echo "→ Raycast scripts"
 SCRIPTS="$HOME/.scripts"
 
@@ -70,22 +82,29 @@ for script in "$DOTFILES"/raycast/scripts/*; do
   link "$script" "$SCRIPTS/$(basename "$script")"
 done
 
+# Latest Node LTS via fnm; only print fnm's output when it did something.
 echo "→ Node"
 node_out="$(fnm install --lts 2>&1)" || { echo "$node_out"; exit 1; }
+
 if grep -q "already installed" <<<"$node_out"; then
   echo "  skip  node (latest LTS already installed)"
 else
   echo "$node_out"
 fi
+
+# Make it the default, and put it on PATH for the rest of this script.
 fnm default lts-latest
 eval "$(fnm env --shell bash)"
 
+# ni: one command for npm/pnpm/yarn/bun.
 if command -v ni >/dev/null; then
   echo "  skip  ni"
 else
   npm i -g @antfu/ni
 fi
 
+# Each vscode/<ext>/ folder with a package.json is a local extension.
+# VSCode expects it at ~/.vscode/extensions/<publisher>.<name>-<version>.
 echo "→ VSCode local extensions"
 for pkg in "$DOTFILES"/vscode/*/package.json; do
   id="$(node -p "const p = require('$pkg'); p.publisher + '.' + p.name + '-' + p.version")"
@@ -98,6 +117,7 @@ echo "→ macOS"
 defaults write -g NSUserKeyEquivalents -dict-add "Minimize" "\0"
 
 # Hide the Dock for good: auto-hide with a 1000s reveal delay.
+# Restart the Dock only when the setting changes, to avoid a flicker.
 if [[ "$(defaults read com.apple.dock autohide-delay 2>/dev/null)" == "1000" ]]; then
   echo "  skip  dock (already hidden)"
 else
