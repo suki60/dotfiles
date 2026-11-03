@@ -123,6 +123,10 @@ export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SO
 alias szsh="source ~/.zshrc"
 copy-last-output() {
   local cmd=$(fc -ln -1)
+
+  # Show the message now: zle only redraws after the widget returns.
+  zle -M "Running: $cmd ..."
+  zle -R
   eval "$cmd" 2>&1 | pbcopy
   zle -M "Copied output of: $cmd"
 }
