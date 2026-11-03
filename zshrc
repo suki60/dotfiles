@@ -46,6 +46,15 @@ cr() {
   cd "$root/$repo"
 }
 
+# folders: pick a subfolder of the current dir with fzf and cd into it
+cf() {
+  local dir
+
+  dir="$(find . -mindepth 1 -maxdepth 1 -type d -exec basename {} \; \
+    | sort -f | fzf --reverse --prompt='folder> ' --query="$1" --select-1)" || return
+  cd "$dir"
+}
+
 # claude
 alias k="claude"
 alias kp="k -p"
