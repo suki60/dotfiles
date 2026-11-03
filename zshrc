@@ -12,7 +12,7 @@ alias doc="cd ~/Documents"
 alias wk="cd ~/Documents/work"
 alias box="cd ~/Documents/box"
 alias rp="cd ~/Documents/repos"
-alias kpj="cd ~/claude/projects"
+alias kpj="cd ~/.claude/projects"
 
 # repos
 alias dot="cd ~/Documents/repos/dotfiles"
