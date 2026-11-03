@@ -12,8 +12,8 @@ Write a prompt the user pastes into a fresh chat. That chat knows nothing about 
 
 Arguments: `$ARGUMENTS`
 
-- **Empty**: hand off the work that is still to be done, based on the latest decisions in this conversation.
-- **Text**: use it to narrow the task or say where it will run (e.g. "the starship change, from the dotfiles repo").
+- **Empty**: hand off the work that is still pending, as you understand it from the latest decisions in this conversation.
+- **Text**: this is my description of what to hand off. Treat it as the spec: it decides the task and its scope, and wins if it conflicts with your reading of the conversation. Use the conversation only to fill in the details it leaves out (paths, values, checks, decisions). It may also say where the next chat will run (e.g. "the starship change, from the dotfiles repo").
 
 ## What goes in the block
 
