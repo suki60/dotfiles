@@ -46,6 +46,15 @@ cr() {
   cd "$root/$repo"
 }
 
+# home: pick a folder in ~ with fzf and cd into it
+ch() {
+  local dir
+
+  dir="$(find "$HOME" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; \
+    | sort -f | fzf --reverse --prompt='home> ' --query="$1" --select-1)" || return
+  cd "$HOME/$dir"
+}
+
 # folders: pick a subfolder of the current dir with fzf and cd into it
 cf() {
   local dir
