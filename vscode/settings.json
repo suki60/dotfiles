@@ -55,6 +55,7 @@
   "editor.formatOnPaste": false,
   "editor.glyphMargin": false,
   "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.inlineSuggest.enabled": false,
   "editor.minimap.enabled": false,
   "editor.occurrencesHighlight": "off",
   "editor.selectionHighlight": true,
@@ -102,7 +103,7 @@
     "plaintext": false,
     "scminput": false
   },
-  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": false,
   "js/ts.format.semicolons": "remove",
   "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "js/ts.preferGoToSourceDefinition": true,
