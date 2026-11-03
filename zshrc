@@ -5,13 +5,13 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 
 # folders
-alias hom="cd ~"
+alias h="cd ~"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias doc="cd ~/Documents"
 alias wk="cd ~/Documents/work"
 alias box="cd ~/Documents/box"
-alias rep="cd ~/Documents/repos"
+alias rp="cd ~/Documents/repos"
 alias kpj="cd ~/claude/projects"
 
 # repos
