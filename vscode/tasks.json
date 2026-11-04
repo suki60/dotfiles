@@ -39,6 +39,29 @@
         "close": true
       },
       "problemMatcher": []
+    },
+    {
+      "label": "claude-stage-related",
+      "type": "shell",
+      "command": "claude -p --no-session-persistence --model haiku \"/gs $GS_DESCRIPTION\"",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "GS_DESCRIPTION": "${input:gsDescription}"
+        }
+      },
+      "presentation": {
+        "reveal": "never",
+        "close": true
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "gsDescription",
+      "type": "promptString",
+      "description": "Describe the changes to stage"
     }
   ]
 }
