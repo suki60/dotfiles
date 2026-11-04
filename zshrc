@@ -11,7 +11,7 @@ alias dl="cd ~/Downloads"
 alias doc="cd ~/Documents"
 alias wk="cd ~/Documents/work"
 alias box="cd ~/Documents/box"
-alias rp="cd ~/Documents/repos"
+alias r="cd ~/Documents/repos"
 alias kpj="cd ~/.claude/projects"
 
 # repos
@@ -36,8 +36,17 @@ gc() {
 }
 alias gp="git pull"
 
+# folders: pick a subfolder of the current dir with fzf and cd into it
+f() {
+  local dir
+
+  dir="$(find . -mindepth 1 -maxdepth 1 -type d -exec basename {} \; \
+    | sort -f | fzf --reverse --prompt='folder> ' --query="$1" --select-1)" || return
+  cd "$dir"
+}
+
 # repos: pick one with fzf and cd into it
-cr() {
+fr() {
   local root="$HOME/Documents/repos"
   local repo
 
@@ -47,21 +56,12 @@ cr() {
 }
 
 # home: pick a folder in ~ with fzf and cd into it
-ch() {
+fh() {
   local dir
 
   dir="$(find "$HOME" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; \
     | sort -f | fzf --reverse --prompt='home> ' --query="$1" --select-1)" || return
   cd "$HOME/$dir"
-}
-
-# folders: pick a subfolder of the current dir with fzf and cd into it
-cf() {
-  local dir
-
-  dir="$(find . -mindepth 1 -maxdepth 1 -type d -exec basename {} \; \
-    | sort -f | fzf --reverse --prompt='folder> ' --query="$1" --select-1)" || return
-  cd "$dir"
 }
 
 # claude
@@ -85,7 +85,7 @@ c() {
 }
 
 # finder: open the given path, or the current folder
-f() {
+o() {
   open "${@:-.}"
 }
 
