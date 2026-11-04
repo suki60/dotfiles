@@ -1,6 +1,6 @@
 ---
-name: "sum"
-description: Summarizes the entire current conversation into a concise recap and outputs it inside a fenced plain-text code block so the user can copy it with one click. Use this whenever the user asks to "summarize this conversation," "recap this chat," "summarize what we talked about," wants "a summary I can copy/paste," asks for a summary "in a text box," or invokes /summary. Trigger even if they don't use the word "summary" explicitly but clearly want a wrap-up of the whole conversation to take elsewhere (e.g. "give me something I can paste into an email/notes app about this chat").
+name: "s"
+description: Summarize the current conversation as a short recap in a plain-text code block and copy it to the clipboard. Use when the user invokes /s, asks to summarize or recap this chat, or wants a wrap-up of the conversation to paste elsewhere (email, notes, ticket, Slack), even without saying "summary". Not for summarizing files or documents.
 ---
 
 # Conversation Summary
@@ -13,7 +13,7 @@ Trigger this skill any time the user wants a condensed writeup of the conversati
 
 Do NOT use this for:
 - Summarizing an uploaded file or document (that's just a normal response, no code block needed).
-- Summarizing a past/different conversation found via conversation_search — this skill is for the *current* live conversation only.
+- Summarizing a past or different conversation — this skill is for the *current* conversation only.
 
 ## How to produce the summary
 
@@ -36,13 +36,13 @@ Do NOT use this for:
    - <item>
    ```
 
-3. **Output format — this is the important part**: put the entire summary inside a single fenced code block (triple backticks, plain text — no language tag needed) in your reply. Claude.ai renders a copy button on code blocks, which is what makes this "easy to copy and paste." Do NOT wrap it in an artifact and do NOT create a file as the deliverable — the point is a quick inline copyable block, not a saved document (the temp file in step 6 only feeds the clipboard).
+3. **Output format — this is the important part**: put the entire summary inside a single fenced code block (triple backticks, plain text — no language tag needed) in your reply, so it's easy to select and copy. Do NOT create a file or artifact as the deliverable — the point is a quick inline block, not a saved document (the temp file in step 6 only feeds the clipboard).
 4. Keep formatting inside the block simple (plain dashes for bullets, no markdown headers like `#`, since code blocks display as literal text). ALL-CAPS or `===` underlines are fine for section titles since they render fine as plain text.
 5. Keep the summary tight — favor a few tight bullets over exhaustive detail, unless the user asks for an especially thorough recap.
-6. Also copy the summary to the clipboard (Claude Code on macOS), so the user only presses ⌘V: write it to a temp file in the scratchpad (or `/tmp` if there is none) with the Write tool, then run `pbcopy < <that file>`. A file avoids quoting problems with multi-line text. If `pbcopy` isn't available (e.g. claude.ai), skip this step.
+6. Also copy the summary to the clipboard, so the user only presses ⌘V: write it to a temp file in the scratchpad (or `/tmp` if there is none) with the Write tool, then run `pbcopy < <that file>`. A file avoids quoting problems with multi-line text. If `pbcopy` isn't available, skip this step.
 7. After the code block, add at most one short sentence, saying "(copied)" if step 6 ran. Don't repeat the summary content outside the block.
 
 ## Edge cases
 
 - **Very long/sprawling conversations**: focus on the throughline and most recent/decision-relevant material rather than trying to capture every message; note briefly that older tangents were condensed if that seems useful.
-- **User wants it saved as a file instead of pasted**: if they explicitly ask for a downloadable file (e.g. "save this as a doc"), that's a different request — use the docx or md file-creation flow instead of this skill's code-block output.
+- **User wants it saved as a file instead of pasted**: if they explicitly ask for a file (e.g. "save this as a .md"), that's a different request — write the file where they ask instead of using this skill's code-block output.
