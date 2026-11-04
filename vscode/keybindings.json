@@ -619,6 +619,10 @@
     "command": "git.viewChanges"
   },
   {
+    "key": "ctrl+shift+alt+cmd+up",
+    "command": "git.push"
+  },
+  {
     "key": "ctrl+shift+alt+cmd+w",
     "command": "workbench.action.closeWindow"
   },
