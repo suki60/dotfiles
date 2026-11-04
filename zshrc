@@ -12,7 +12,6 @@ alias doc="cd ~/Documents"
 alias wk="cd ~/Documents/work"
 alias box="cd ~/Documents/box"
 alias r="cd ~/Documents/repos"
-alias kpj="cd ~/.claude/projects"
 
 # repos
 alias dot="cd ~/Documents/repos/dotfiles"
@@ -66,10 +65,9 @@ fh() {
 
 # claude
 alias k="claude"
-alias kp="k -p"
+alias kp="k -p --no-session-persistence"
 alias kr="k --resume"
 alias kc="k --continue"
-alias kcp="k --continue -p"
 alias ka="k agents"
 
 # claude in ~ from anywhere; the subshell keeps your current dir
