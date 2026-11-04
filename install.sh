@@ -116,6 +116,10 @@ echo "→ macOS"
 # Free ⌘M: no menu item claims it, so it never minimizes.
 defaults write -g NSUserKeyEquivalents -dict-add "Minimize" "\0"
 
+# ⌥⌘T opens Chrome's Task Manager (no default shortcut on Mac).
+# Chrome picks it up after a full quit (⌘Q) and reopen.
+defaults write com.google.Chrome NSUserKeyEquivalents -dict-add "Task Manager" "@~t"
+
 # Hide the Dock for good: auto-hide with a 1000s reveal delay.
 # Restart the Dock only when the setting changes, to avoid a flicker.
 if [[ "$(defaults read com.apple.dock autohide-delay 2>/dev/null)" == "1000" ]]; then
