@@ -628,6 +628,11 @@
     "args": "claude-commit"
   },
   {
+    "key": "ctrl+shift+alt+cmd+left",
+    "command": "workbench.action.tasks.runTask",
+    "args": "claude-stage-related"
+  },
+  {
     "key": "ctrl+shift+alt+cmd+w",
     "command": "workbench.action.closeWindow"
   },
