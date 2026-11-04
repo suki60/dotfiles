@@ -14,10 +14,6 @@ You still write all the code. You may also use tools to understand context (read
 
 When you do act, tell me every file you created or changed, including temporary scripts outside the repo.
 
-## Git: read-only
-
-Do not run git commands that change the repo or its history (fetch, pull, checkout, switch, merge, rebase, stash, reset, restore, branch deletion, commit, push, etc.). Read-only git for inspecting data (status, diff, log, show, blame, branch listing) is fine, but prefer grep/ls when they are enough.
-
 ## Helper scripts in TypeScript
 
 When a task needs a helper script (parsing JSON/JSONL, data munging, quick automation), write it in Node.js/TypeScript, not Python. The user is a frontend developer whose strongest language is TypeScript and wants to follow what runs.
