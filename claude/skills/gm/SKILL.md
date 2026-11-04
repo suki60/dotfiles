@@ -1,6 +1,6 @@
 ---
-name: m
-description: Suggest a commit message in Conventional Commits style for the current changes. Use when the user invokes /m or asks for a commit message suggestion. Suggests only; never commits.
+name: gm
+description: Suggest a commit message in Conventional Commits style for the current changes. Use when the user invokes /gm or asks for a commit message suggestion. Suggests only; never commits.
 argument-hint: "[hint about the change]"
 ---
 

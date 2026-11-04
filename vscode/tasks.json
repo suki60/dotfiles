@@ -30,7 +30,7 @@
     {
       "label": "claude-commit",
       "type": "shell",
-      "command": "claude -p --no-session-persistence '/c'",
+      "command": "claude -p --no-session-persistence '/gc'",
       "options": {
         "cwd": "${workspaceFolder}"
       },
