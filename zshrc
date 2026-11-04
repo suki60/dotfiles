@@ -65,7 +65,7 @@ fh() {
 
 # claude
 alias k="claude"
-alias kp="k -p --no-session-persistence"
+alias kp="k -p --no-session-persistence --model haiku"
 alias kr="k --resume"
 alias kc="k --continue"
 alias ka="k agents"

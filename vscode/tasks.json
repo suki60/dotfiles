@@ -30,7 +30,7 @@
     {
       "label": "claude-commit",
       "type": "shell",
-      "command": "claude -p --no-session-persistence '/gc'",
+      "command": "claude -p --no-session-persistence --model haiku '/gc'",
       "options": {
         "cwd": "${workspaceFolder}"
       },
