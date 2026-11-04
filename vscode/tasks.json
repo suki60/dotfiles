@@ -26,6 +26,19 @@
         "close": true
       },
       "problemMatcher": []
+    },
+    {
+      "label": "claude-commit",
+      "type": "shell",
+      "command": "claude -p --no-session-persistence '/c'",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "never",
+        "close": true
+      },
+      "problemMatcher": []
     }
   ]
 }
