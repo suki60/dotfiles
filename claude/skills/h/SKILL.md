@@ -1,6 +1,6 @@
 ---
 name: h
-description: Hand off the pending work from this conversation to a new chat. Outputs one copyable block written as a direct request, so pasting it into the next chat starts the work right away without more explaining. Use when the user invokes /h or wants to "hand off", "continue this in another chat", or "give me a prompt for the next chat".
+description: Hand off the pending work from this conversation to a new chat. Outputs one copyable block written as a direct request and copies it to the clipboard, so pasting it into the next chat starts the work right away without more explaining. Use when the user invokes /h or wants to "hand off", "continue this in another chat", or "give me a prompt for the next chat".
 argument-hint: "[what to hand off / where it will run]"
 ---
 
@@ -57,5 +57,6 @@ OPEN QUESTIONS
 
 - Put the whole handoff in one fenced block with a 4-backtick fence (````` ````text `````), so code snippets inside it can use normal triple-backtick fences without breaking it.
 - Inside the block, use plain text with ALL-CAPS section titles, no `#` headers.
-- After the block, write at most one line, e.g. which folder or repo to open the new chat in. Don't repeat the content.
-- Don't create files; the block is the whole output.
+- Also copy the handoff to the clipboard, so the user only presses ⌘V: write the block's content (without the fence) to a temp file in the scratchpad (or `/tmp` if there is none) with the Write tool, then run `pbcopy < <that file>`. A file avoids quoting problems with multi-line text. If `pbcopy` isn't available, skip this step.
+- After the block, write at most one line, e.g. which folder or repo to open the new chat in, plus "(copied)" if the clipboard step ran. Don't repeat the content.
+- Don't create files other than that temp file; the block is the whole output.
