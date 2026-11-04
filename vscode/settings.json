@@ -155,6 +155,8 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeightBold": "normal",
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.mouseWheelScrollSensitivity": 3,
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "args": [

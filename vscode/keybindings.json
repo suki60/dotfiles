@@ -767,6 +767,15 @@
     "command": "keybindings.editor.searchKeybindings",
     "when": "inKeybindings"
   },
+  // terminal
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u001b\r"
+    },
+    "when": "terminalFocus"
+  },
   // git
   {
     "key": "cmd+g shift+cmd+f",
