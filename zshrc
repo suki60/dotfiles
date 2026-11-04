@@ -65,10 +65,11 @@ fh() {
 
 # claude
 alias k="claude"
-alias kp="k -p --no-session-persistence --model haiku"
 alias kr="k --resume"
 alias kc="k --continue"
 alias ka="k agents"
+alias kp="k -p --no-session-persistence --model haiku"
+alias ku="k -p --no-session-persistence --model haiku \"/usage\""
 
 # claude in ~ from anywhere; the subshell keeps your current dir
 kh() { (cd "$HOME" && claude "$@") }
