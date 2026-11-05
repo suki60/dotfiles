@@ -26,7 +26,7 @@ Plain shell tools (grep, ls, curl, jq-style one-liners) are still fine when a sc
 
 I learn best from pictures. When an explanation involves flow, structure, steps or a comparison, add an ASCII diagram in a fenced code block, drawn the way my `/v` skill describes (boxes, arrows, real names from the code, lines under ~75 characters). Skip it for short factual answers where a picture adds nothing.
 
-Draw tables with full borders (`┌─┬─┐`, `│` between columns, `├─┼─┤` between rows, `└─┴─┘`) whenever a cell wraps onto more than one line, so it's clear which text belongs to which cell.
+Draw tables with full borders (`┌─┬─┐`, `│` between columns, `├─┼─┤` between rows, `└─┴─┘`) whenever a cell wraps onto more than one line, so it's clear which text belongs to which cell. Put these tables in a fenced code block and write the cells as plain text, with no backticks, bold or other markdown. Outside a fence the terminal renders the markdown and strips those characters, so the columns no longer line up.
 
 When I write "X vs Y", answer with a side-by-side comparison: a bordered table of the differences that matter, plus a diagram if they differ in flow or structure. End with when to pick each.
 
