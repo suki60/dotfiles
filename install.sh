@@ -120,6 +120,46 @@ for pkg in "$DOTFILES"/vscode/*/package.json; do
   link "$(dirname "$pkg")" "$HOME/.vscode/extensions/$id"
 done
 
+# Each raycast/extensions/<ext>/ is a local Raycast extension. `ray develop`
+# is the only way to register one: it builds into ~/.config/raycast/extensions
+# and keeps watching, so a watcher stops it once the build lands.
+echo "→ Raycast extensions"
+for dir in "$DOTFILES"/raycast/extensions/*/; do
+  dir="${dir%/}"
+  name="$(basename "$dir")"
+  built="$HOME/.config/raycast/extensions/$name/package.json"
+
+  # Skip it if the build is newer than every source file.
+  if [[ -f "$built" ]] && [[ -z "$(find "$dir/src" "$dir/package.json" -newer "$built")" ]]; then
+    echo "  skip  $name (already built)"
+    continue
+  fi
+
+  [[ -d "$dir/node_modules" ]] || npm ci --prefix "$dir"
+  open -ga Raycast
+
+  # Remove the old build so its reappearance means a fresh one.
+  rm -f "$built"
+  # Send ray develop a Ctrl+C once the build appears, or after 60s.
+  (
+    for _ in {1..60}; do
+      [[ -f "$built" ]] && break
+      sleep 1
+    done
+    pkill -INT -f "$dir/node_modules/.bin/ray develop"
+  ) &
+  watcher=$!
+
+  (cd "$dir" && exec ./node_modules/.bin/ray develop) || true
+  kill "$watcher" 2>/dev/null || true
+
+  if [[ -f "$built" ]]; then
+    echo "  built $name"
+  else
+    echo "  FAILED $name, run 'npm run dev' in $dir"
+  fi
+done
+
 echo "→ macOS"
 
 # Free ⌘M: no menu item claims it, so it never minimizes.
