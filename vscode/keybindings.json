@@ -125,6 +125,41 @@
     "command": "update.restartToUpdate"
   },
   {
+    "key": "ctrl+alt+cmd+\\",
+    "command": "workbench.action.maximizeAuxiliaryBar",
+    "when": "!auxiliaryBarMaximized"
+  },
+  {
+    "key": "ctrl+alt+cmd+\\",
+    "command": "workbench.action.restoreAuxiliaryBar",
+    "when": "auxiliaryBarMaximized"
+  },
+  {
+    "key": "ctrl+alt+cmd+space",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+alt+cmd+m",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.toggleAuxiliaryBar"
+      ]
+    },
+    "when": "auxiliaryBarVisible && sideBarVisible || !auxiliaryBarVisible && !sideBarVisible"
+  },
+  {
+    "key": "ctrl+alt+cmd+m",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible && !auxiliaryBarVisible"
+  },
+  {
+    "key": "ctrl+alt+cmd+m",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "auxiliaryBarVisible && !sideBarVisible"
+  },
+  {
     "key": "shift+cmd+.",
     "command": "editor.action.fixAll"
   },
@@ -563,41 +598,6 @@
     "command": "workbench.action.terminal.focusAtIndex9"
   },
   // hyper actions
-  {
-    "key": "ctrl+shift+alt+cmd+\\",
-    "command": "workbench.action.maximizeAuxiliaryBar",
-    "when": "!auxiliaryBarMaximized"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+\\",
-    "command": "workbench.action.restoreAuxiliaryBar",
-    "when": "auxiliaryBarMaximized"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+space",
-    "command": "workbench.action.toggleMaximizedPanel"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+m",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.action.toggleAuxiliaryBar"
-      ]
-    },
-    "when": "auxiliaryBarVisible && sideBarVisible || !auxiliaryBarVisible && !sideBarVisible"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+m",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarVisible && !auxiliaryBarVisible"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+m",
-    "command": "workbench.action.toggleAuxiliaryBar",
-    "when": "auxiliaryBarVisible && !sideBarVisible"
-  },
   {
     "key": "ctrl+shift+alt+cmd+n",
     "command": "workbench.action.duplicateWorkspaceInNewWindow"
