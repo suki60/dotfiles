@@ -667,14 +667,6 @@
   },
   // ctrl+alt+cmd actions
   {
-    "key": "ctrl+alt+cmd+left",
-    "command": "git.pullRebase"
-  },
-  {
-    "key": "ctrl+alt+cmd+right",
-    "command": "git.pushForce"
-  },
-  {
     "key": "ctrl+alt+cmd+up",
     "command": "git.push"
   },
