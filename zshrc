@@ -7,7 +7,7 @@ eval "$(starship init zsh)"
 # folders
 alias h="cd ~"
 alias dt="cd ~/Desktop"
-alias dl="cd ~/Downloads"
+alias dw="cd ~/Downloads"
 alias doc="cd ~/Documents"
 alias wk="cd ~/Documents/work"
 alias box="cd ~/Documents/box"
