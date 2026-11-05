@@ -628,6 +628,10 @@
     "args": "claude-commit"
   },
   {
+    "key": "ctrl+shift+alt+cmd+down",
+    "command": "git.undoCommit"
+  },
+  {
     "key": "ctrl+shift+alt+cmd+left",
     "command": "workbench.action.tasks.runTask",
     "args": "claude-stage-related"
