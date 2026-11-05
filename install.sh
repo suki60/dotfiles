@@ -17,7 +17,7 @@ link() {
   fi
 
   mkdir -p "$(dirname "$dst")"
-  ln -sf "$src" "$dst"
+  ln -sfn "$src" "$dst"
   echo "  linked $dst → $src"
 }
 
@@ -52,23 +52,23 @@ done < "$DOTFILES/vscode/extensions"
 
 [[ $added -eq 1 ]] || echo "  skip  extensions (all installed)"
 
-# Claude Code settings, global instructions and skills.
+# Claude Code settings.
 echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
-link "$DOTFILES/claude/CLAUDE.md"     "$HOME/.claude/CLAUDE.md"
 
-for skill in "$DOTFILES"/claude/skills/*/; do
-  skill="${skill%/}"
-  link "$skill" "$HOME/.claude/skills/$(basename "$skill")"
-done
+# Shared global instructions and skills for Claude Code, Codex and agy.
+# Each pair is the instructions file and the skills folder the tool reads.
+echo "→ Agents"
+for pair in \
+  "$HOME/.claude/CLAUDE.md:$HOME/.claude/skills" \
+  "$HOME/.codex/AGENTS.md:$HOME/.agents/skills" \
+  "$HOME/.gemini/GEMINI.md:$HOME/.gemini/config/skills"; do
+  link "$DOTFILES/agents/AGENTS.md" "${pair%%:*}"
 
-# Antigravity CLI global rules and skills, read by agy from ~/.gemini.
-echo "→ agy"
-link "$DOTFILES/agy/GEMINI.md" "$HOME/.gemini/GEMINI.md"
-
-for skill in "$DOTFILES"/agy/skills/*/; do
-  skill="${skill%/}"
-  link "$skill" "$HOME/.gemini/config/skills/$(basename "$skill")"
+  for skill in "$DOTFILES"/agents/skills/*/; do
+    skill="${skill%/}"
+    link "$skill" "${pair#*:}/$(basename "$skill")"
+  done
 done
 
 # Terminal config.
