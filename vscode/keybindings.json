@@ -791,7 +791,7 @@
   },
   // keybindings
   {
-    "key": "cmd+k",
+    "key": "cmd+i",
     "command": "keybindings.editor.recordSearchKeys",
     "when": "inKeybindings"
   },
