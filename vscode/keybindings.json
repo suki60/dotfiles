@@ -665,6 +665,23 @@
     "key": "ctrl+shift+alt+cmd+]",
     "command": "workbench.action.moveEditorRightInGroup"
   },
+  // ctrl+alt+cmd actions
+  {
+    "key": "ctrl+alt+cmd+left",
+    "command": "git.pullRebase"
+  },
+  {
+    "key": "ctrl+alt+cmd+right",
+    "command": "git.pushForce"
+  },
+  {
+    "key": "ctrl+alt+cmd+up",
+    "command": "git.push"
+  },
+  {
+    "key": "ctrl+alt+cmd+down",
+    "command": "git.pull"
+  },
   {
     "key": "ctrl+left",
     "command": "cursorWordPartLeft",
