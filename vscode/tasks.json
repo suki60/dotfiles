@@ -41,6 +41,19 @@
       "problemMatcher": []
     },
     {
+      "label": "claude-commit-push",
+      "type": "shell",
+      "command": "claude -p --no-session-persistence --model haiku '/gc' && git push",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "never",
+        "close": true
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "claude-stage-related",
       "type": "shell",
       "command": "claude -p --no-session-persistence --model haiku \"/gs $GS_DESCRIPTION\"",
