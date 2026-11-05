@@ -629,7 +629,7 @@
   },
   {
     "key": "ctrl+shift+alt+cmd+down",
-    "command": "git.undoCommit"
+    "command": "git.pull"
   },
   {
     "key": "ctrl+shift+alt+cmd+left",
