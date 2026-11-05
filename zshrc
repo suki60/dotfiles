@@ -111,6 +111,9 @@ alias v="vercel"
 # docker 
 alias d="docker"
 alias dc="docker compose"
+alias dce="dc exec"
+alias dcu="dc up"
+alias dcd="dc down"
 
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
