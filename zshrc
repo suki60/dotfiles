@@ -78,6 +78,9 @@ alias ks="$HOME/Documents/repos/dotfiles/bin/ksessions"
 export BASH_DEFAULT_TIMEOUT_MS="7200000"
 export BASH_MAX_TIMEOUT_MS="7200000"
 
+# antigravity
+alias g="agy"
+
 # vscode: open the given path, or the current folder
 c() {
   code "${@:-.}"
