@@ -1,0 +1,3 @@
+#!/bin/sh
+# Copy the absolute path of the hovered entry ($nnn is only its name)
+printf '%s' "$PWD/$nnn" | pbcopy
