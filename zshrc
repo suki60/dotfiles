@@ -25,6 +25,8 @@ export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
 export HOMEBREW_NO_ENV_HINTS=1
 
 # git
+alias g="git"
+alias gp="g pull"
 gr() {
   git commit --fixup="$1" && GIT_SEQUENCE_EDITOR=true git rebase -i --autostash --autosquash "$1~1"
 }
@@ -33,7 +35,6 @@ gc() {
   gh repo list "$1" --limit 500 --json nameWithOwner -q '.[].nameWithOwner' \
     | fzf | xargs -r gh repo clone
 }
-alias gp="git pull"
 
 # folders: pick a subfolder of the current dir with fzf and cd into it
 f() {
@@ -82,7 +83,7 @@ export BASH_MAX_TIMEOUT_MS="7200000"
 alias x="codex"
 
 # antigravity
-alias g="agy"
+alias a="agy"
 
 # vscode: open the given path, or the current folder
 c() {
