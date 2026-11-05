@@ -101,7 +101,7 @@
     "command": "search.action.openEditor"
   },
   {
-    "key": "shift+cmd+m",
+    "key": "ctrl+alt+cmd+m",
     "command": "workbench.action.toggleZenMode"
   },
   {
@@ -139,7 +139,7 @@
     "command": "workbench.action.toggleMaximizedPanel"
   },
   {
-    "key": "ctrl+alt+cmd+m",
+    "key": "shift+cmd+m",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -150,12 +150,12 @@
     "when": "auxiliaryBarVisible && sideBarVisible || !auxiliaryBarVisible && !sideBarVisible"
   },
   {
-    "key": "ctrl+alt+cmd+m",
+    "key": "shift+cmd+m",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarVisible && !auxiliaryBarVisible"
   },
   {
-    "key": "ctrl+alt+cmd+m",
+    "key": "shift+cmd+m",
     "command": "workbench.action.toggleAuxiliaryBar",
     "when": "auxiliaryBarVisible && !sideBarVisible"
   },
