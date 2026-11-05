@@ -620,7 +620,7 @@
   },
   {
     "key": "ctrl+shift+alt+cmd+right",
-    "command": "git.push"
+    "command": "git.stageAll"
   },
   {
     "key": "ctrl+shift+alt+cmd+up",
@@ -629,11 +629,11 @@
   },
   {
     "key": "ctrl+shift+alt+cmd+down",
-    "command": "git.pull"
+    "command": "git.cleanAll"
   },
   {
     "key": "ctrl+shift+alt+cmd+left",
-    "command": "git.stageAll"
+    "command": "git.unstageAll"
   },
   {
     "key": "ctrl+shift+alt+cmd+w",
