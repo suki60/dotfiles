@@ -633,8 +633,7 @@
   },
   {
     "key": "ctrl+shift+alt+cmd+left",
-    "command": "workbench.action.tasks.runTask",
-    "args": "claude-stage-related"
+    "command": "git.stageAll"
   },
   {
     "key": "ctrl+shift+alt+cmd+w",
@@ -802,6 +801,11 @@
     "key": "cmd+k shift+cmd+enter",
     "command": "workbench.action.tasks.runTask",
     "args": "claude-commit"
+  },
+  {
+    "key": "cmd+k shift+cmd+s",
+    "command": "workbench.action.tasks.runTask",
+    "args": "claude-stage-related"
   },
   // git
   {
