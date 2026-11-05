@@ -619,11 +619,11 @@
     "command": "git.viewChanges"
   },
   {
-    "key": "ctrl+shift+alt+cmd+up",
+    "key": "ctrl+shift+alt+cmd+right",
     "command": "git.push"
   },
   {
-    "key": "ctrl+shift+alt+cmd+down",
+    "key": "ctrl+shift+alt+cmd+up",
     "command": "workbench.action.tasks.runTask",
     "args": "claude-commit"
   },
