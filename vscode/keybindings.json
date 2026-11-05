@@ -624,12 +624,11 @@
   },
   {
     "key": "ctrl+shift+alt+cmd+up",
-    "command": "workbench.action.tasks.runTask",
-    "args": "claude-commit"
+    "command": "git.commit"
   },
   {
     "key": "ctrl+shift+alt+cmd+down",
-    "command": "git.cleanAll"
+    "command": "git.undoCommit"
   },
   {
     "key": "ctrl+shift+alt+cmd+left",
@@ -668,7 +667,8 @@
   // ctrl+alt+cmd actions
   {
     "key": "ctrl+alt+cmd+up",
-    "command": "git.push"
+    "command": "workbench.action.tasks.runTask",
+    "args": "claude-commit-push"
   },
   {
     "key": "ctrl+alt+cmd+down",
