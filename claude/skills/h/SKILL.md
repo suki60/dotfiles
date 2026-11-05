@@ -1,7 +1,8 @@
 ---
 name: h
-description: Hand off the pending work from this conversation to a new chat. Outputs one copyable block written as a direct request and copies it to the clipboard, so pasting it into the next chat starts the work right away without more explaining. Use when the user invokes /h or wants to "hand off", "continue this in another chat", or "give me a prompt for the next chat".
+description: Hand off the pending work from this conversation to a new chat. Outputs one copyable block written as a direct request and copies it to the clipboard, so pasting it into the next chat starts the work right away without more explaining. Use only when the user invokes /h.
 argument-hint: "[what to hand off / where it will run]"
+disable-model-invocation: true
 ---
 
 # Hand off to the next chat

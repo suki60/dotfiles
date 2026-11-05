@@ -1,6 +1,7 @@
 ---
 name: "s"
-description: Summarize the current conversation as a short recap in a plain-text code block and copy it to the clipboard. Use when the user invokes /s, asks to summarize or recap this chat, or wants a wrap-up of the conversation to paste elsewhere (email, notes, ticket, Slack), even without saying "summary". Not for summarizing files or documents.
+description: Summarize the current conversation as a short recap in a plain-text code block and copy it to the clipboard. Use only when the user invokes /s. Not for summarizing files or documents.
+disable-model-invocation: true
 ---
 
 # Conversation Summary

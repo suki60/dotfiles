@@ -1,7 +1,8 @@
 ---
 name: v
-description: Explain something visually with ASCII diagrams in the terminal. No argument = re-explain the last answer visually; a file path = explain that file visually; any other text = explain that topic or question visually.
+description: Explain something visually with ASCII diagrams in the terminal. No argument = re-explain the last answer visually; a file path = explain that file visually; any other text = explain that topic or question visually. Use only when the user invokes /v.
 argument-hint: "[file path | question]"
+disable-model-invocation: true
 ---
 
 # Visual explanation

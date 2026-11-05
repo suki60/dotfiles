@@ -1,7 +1,8 @@
 ---
 name: gm
-description: Suggest a commit message in Conventional Commits style for the current changes. Use when the user invokes /gm or asks for a commit message suggestion. Suggests only; never commits.
+description: Suggest a commit message in Conventional Commits style for the current changes. Use only when the user invokes /gm. Suggests only; never commits.
 argument-hint: "[hint about the change]"
+disable-model-invocation: true
 ---
 
 # Commit message suggestion
