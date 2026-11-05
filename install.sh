@@ -62,9 +62,14 @@ for skill in "$DOTFILES"/claude/skills/*/; do
   link "$skill" "$HOME/.claude/skills/$(basename "$skill")"
 done
 
-# Antigravity CLI global rules, read by agy from ~/.gemini/GEMINI.md.
+# Antigravity CLI global rules and skills, read by agy from ~/.gemini.
 echo "→ agy"
 link "$DOTFILES/agy/GEMINI.md" "$HOME/.gemini/GEMINI.md"
+
+for skill in "$DOTFILES"/agy/skills/*/; do
+  skill="${skill%/}"
+  link "$skill" "$HOME/.gemini/config/skills/$(basename "$skill")"
+done
 
 # Terminal config.
 echo "→ Ghostty"
