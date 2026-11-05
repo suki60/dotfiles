@@ -624,7 +624,8 @@
   },
   {
     "key": "ctrl+shift+alt+cmd+up",
-    "command": "git.commit"
+    "command": "workbench.action.tasks.runTask",
+    "args": "claude-commit"
   },
   {
     "key": "ctrl+shift+alt+cmd+down",
