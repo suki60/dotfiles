@@ -117,8 +117,29 @@ fi
 # VSCode expects it at ~/.vscode/extensions/<publisher>.<name>-<version>.
 echo "→ VSCode local extensions"
 for pkg in "$DOTFILES"/vscode/*/package.json; do
+  dir="$(dirname "$pkg")"
+  name="$(basename "$dir")"
   id="$(node -p "const p = require('$pkg'); p.publisher + '.' + p.name + '-' + p.version")"
-  link "$(dirname "$pkg")" "$HOME/.vscode/extensions/$id"
+  built="$dir/out/extension.js"
+
+  # Install deps only the first time: exact versions if there's a lockfile.
+  if [[ ! -d "$dir/node_modules" ]]; then
+    if [[ -f "$dir/package-lock.json" ]]; then
+      npm ci --prefix "$dir"
+    else
+      npm install --prefix "$dir"
+    fi
+  fi
+
+  # Skip the build if it's newer than every source file.
+  if [[ -f "$built" ]] && [[ -z "$(find "$dir/src" "$pkg" -newer "$built")" ]]; then
+    echo "  skip  $name (already built)"
+  else
+    npm run build --prefix "$dir"
+    echo "  built $name"
+  fi
+
+  link "$dir" "$HOME/.vscode/extensions/$id"
 done
 
 # Each raycast/extensions/<ext>/ is a local Raycast extension. `ray develop`
