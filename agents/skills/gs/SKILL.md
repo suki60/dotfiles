@@ -3,7 +3,7 @@ name: gs
 description: Stage the changes this conversation made that aren't committed yet, or the changes related to what the user describes after /gs, and write a commit message for them the way /gm does. Never commits. Use only when the user invokes /gs.
 argument-hint: "[what the changes are about]"
 disable-model-invocation: true
-allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git add:*), Bash(git apply --cached:*)
+allowed-tools: Bash(git status:*), Bash(git diff:*), Bash(git add:*), Bash(git apply --cached:*), Bash(printf:*), Bash(pbcopy:*)
 ---
 
 # Stage this session's changes
@@ -20,6 +20,7 @@ What the changes are about, from the user (may be empty): `$ARGUMENTS`
    - Only some hunks of a file are in scope: write a patch with just those hunks, copied exactly from `git diff -- <path>`, to the scratchpad directory, then `git apply --cached <patch>`. Never change the working tree.
 3. Run `git diff --staged` and check it holds only the changes in scope.
 4. Write the message by `/gm`'s **Format** rules, from `git diff --staged`.
+5. Copy the message to the clipboard: `printf '%s' '<message>' | pbcopy`.
 
 ## Never
 
