@@ -23,7 +23,7 @@
   },
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
+  "switchModelsOnFlag": false,
   "voiceEnabled": true,
-  "autoUpdates": false,
-  "switchModelsOnFlag": false
+  "autoUpdates": false
 }
