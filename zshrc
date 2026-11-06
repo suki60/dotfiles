@@ -81,9 +81,24 @@ export BASH_MAX_TIMEOUT_MS="7200000"
 
 # codex
 alias x="codex"
+alias xr="x resume"
+alias xc="x resume --last"
+alias xa="x agents"
+alias xp="x exec --ephemeral"
+alias xs="$HOME/Documents/repos/dotfiles/bin/csessions"
+
+# codex in ~ from anywhere; the subshell keeps your current dir
+xh() { (cd "$HOME" && codex "$@") }
 
 # antigravity
 alias a="agy"
+alias ac="a --continue"
+alias aa="a agents"
+alias ap="a --print"
+alias as="$HOME/Documents/repos/dotfiles/bin/asessions"
+
+# antigravity in ~ from anywhere; the subshell keeps your current dir
+ah() { (cd "$HOME" && agy "$@") }
 
 # vscode: open the given path, or the current folder
 c() {

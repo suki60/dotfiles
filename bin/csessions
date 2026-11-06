@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# List Codex sessions for the current folder by title.
+#   enter → resume the selected session   n → start a new chat in this folder   c → open its file in VS Code   p → open sessions folder in VS Code   r → rename it   x → archive it
+#   ↑/↓ to move, q/esc to quit
+set -euo pipefail
+
+command -v fzf     >/dev/null || { echo "fzf required";     exit 1; }
+command -v jq      >/dev/null || { echo "jq required";      exit 1; }
+command -v sqlite3 >/dev/null || { echo "sqlite3 required"; exit 1; }
+
+DIR="${1:-$PWD}"
+DIR="$(cd "$DIR" && pwd -P)"
+CODEX="$HOME/.codex"
+DB="$CODEX/state_5.sqlite"
+
+[[ -f "$DB" ]] || { echo "No Codex state db at $DB"; exit 1; }
+
+q() { printf '%s' "${1//\'/\'\'}"; }
+
+list() {
+  sqlite3 -separator $'\t' "$DB" "
+    SELECT id,
+      strftime('%Y-%m-%d %H:%M', updated_at, 'unixepoch', 'localtime'),
+      replace(replace(replace(substr(coalesce(nullif(name,''), nullif(title,''), nullif(first_user_message,''), '(untitled)'), 1, 80),
+        char(9), ' '), char(10), ' '), char(13), ' ')
+    FROM threads
+    WHERE cwd = '$(q "$DIR")' AND archived = 0
+    ORDER BY updated_at DESC"
+}
+
+while true; do
+  rows="$(list)"
+  [[ -n "$rows" ]] || { echo "No sessions for $DIR"; exit 0; }
+
+  out="$(printf '%s\n' "$rows" | fzf --disabled --delimiter=$'\t' --with-nth=2.. \
+    --expect=c,n,p,r,x,q --header="enter: open   n: new chat   c: code   p: sessions   r: rename   x: archive   q: quit   ($DIR)" \
+    --prompt='session> ' --no-sort --reverse || true)"
+  key="$(sed -n 1p <<<"$out")"
+  line="$(sed -n 2p <<<"$out")"
+  [[ -z "$line" || "$key" == q ]] && exit 0
+  id="${line%%$'\t'*}"
+  case "$key" in
+    "") cd "$DIR" && exec codex resume "$id" ;;
+    n) cd "$DIR" && exec codex ;;
+    c) code "$(sqlite3 "$DB" "SELECT rollout_path FROM threads WHERE id = '$(q "$id")'")" ;;
+    p) code "$CODEX/sessions" ;;
+    r)
+      new=""
+      read -r -p "New title: " new </dev/tty || true
+
+      if [[ -n "$new" ]]; then
+        sqlite3 "$DB" "UPDATE threads SET name = '$(q "$new")' WHERE id = '$(q "$id")'"
+        jq -cn --arg id "$id" --arg t "$new" --arg at "$(date -u '+%Y-%m-%dT%H:%M:%SZ')" \
+          '{id:$id,thread_name:$t,updated_at:$at}' >>"$CODEX/session_index.jsonl"
+      fi
+      ;;
+    x) codex archive "$id" >/dev/null ;;
+  esac
+done

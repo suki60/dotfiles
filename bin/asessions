@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+# List Antigravity CLI (agy) sessions for the current folder by title.
+#   enter → resume the selected session   n → start a new chat in this folder   c → open its brain folder in VS Code   p → open agy data folder in VS Code
+#   ↑/↓ to move, q/esc to quit
+set -euo pipefail
+
+command -v fzf     >/dev/null || { echo "fzf required";     exit 1; }
+command -v sqlite3 >/dev/null || { echo "sqlite3 required"; exit 1; }
+
+DIR="${1:-$PWD}"
+DIR="$(cd "$DIR" && pwd -P)"
+AGY="$HOME/.gemini/antigravity-cli"
+DB="$AGY/conversation_summaries.db"
+
+[[ -f "$DB" ]] || { echo "No agy summaries db at $DB"; exit 1; }
+
+list() {
+  sqlite3 -readonly -separator $'\t' "$DB" "
+    SELECT conversation_id,
+      strftime('%Y-%m-%d %H:%M', substr(last_modified_time, 1, 19), 'localtime'),
+      replace(replace(replace(substr(coalesce(nullif(title,''), nullif(preview,''), '(untitled)'), 1, 80),
+        char(9), ' '), char(10), ' '), char(13), ' ')
+    FROM conversation_summaries
+    WHERE workspace_uris LIKE '%\"file://${DIR//\'/\'\'}\"%'
+    ORDER BY last_modified_time DESC"
+}
+
+while true; do
+  rows="$(list)"
+  [[ -n "$rows" ]] || { echo "No sessions for $DIR"; exit 0; }
+
+  out="$(printf '%s\n' "$rows" | fzf --disabled --delimiter=$'\t' --with-nth=2.. \
+    --expect=c,n,p,q --header="enter: open   n: new chat   c: code   p: agy data   q: quit   ($DIR)" \
+    --prompt='session> ' --no-sort --reverse || true)"
+  key="$(sed -n 1p <<<"$out")"
+  line="$(sed -n 2p <<<"$out")"
+  [[ -z "$line" || "$key" == q ]] && exit 0
+  id="${line%%$'\t'*}"
+  case "$key" in
+    "") cd "$DIR" && exec agy --conversation "$id" ;;
+    n) cd "$DIR" && exec agy ;;
+    c)
+      if [[ -d "$AGY/brain/$id" ]]; then
+        code "$AGY/brain/$id"
+      else
+        echo "No brain folder for $id"
+      fi
+      ;;
+    p) code "$AGY" ;;
+  esac
+done
