@@ -815,6 +815,15 @@
     },
     "when": "terminalFocus"
   },
+  // Send Alt+V so Claude Code starts voice push-to-talk.
+  {
+    "key": "ctrl+shift+alt+cmd+space",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u001bv"
+    },
+    "when": "terminalFocus"
+  },
   // git
   {
     "key": "cmd+g shift+cmd+f",

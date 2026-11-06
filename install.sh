@@ -55,6 +55,7 @@ done < "$DOTFILES/vscode/extensions"
 # Claude Code settings.
 echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
+link "$DOTFILES/claude/keybindings.json" "$HOME/.claude/keybindings.json"
 
 # Shared global instructions and skills for Claude Code, Codex and agy.
 # Each pair is the instructions file and the skills folder the tool reads.
