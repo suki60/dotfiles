@@ -19,6 +19,7 @@ alias dot="cd ~/Documents/repos/dotfiles"
 alias pf="cd ~/Documents/repos/portfolio"
 alias cv="cd ~/Documents/repos/cv"
 alias wed="cd ~/Documents/repos/wedding"
+alias wik="cd ~/Documents/repos/offwik"
 
 # brew
 alias bu="brew update && brew upgrade && brew cleanup"
