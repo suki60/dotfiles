@@ -935,5 +935,39 @@
   {
     "key": "cmd+g ctrl+alt+cmd+w",
     "command": "git.deleteWorktree"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+,",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        {
+          "command": "extension.multiCommand.execute",
+          "args": {
+            "command": "multiCommand.scmFocusMessage"
+          }
+        },
+        "scm.clearInput",
+        "workbench.action.terminal.focus"
+      ]
+    },
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+,",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        {
+          "command": "extension.multiCommand.execute",
+          "args": {
+            "command": "multiCommand.scmFocusMessage"
+          }
+        },
+        "scm.clearInput",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "!terminalFocus"
   }
 ]
