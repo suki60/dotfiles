@@ -619,6 +619,10 @@
     "command": "git.viewChanges"
   },
   {
+    "key": "ctrl+shift+alt+cmd+m",
+    "command": "scmMessage.generate"
+  },
+  {
     "key": "ctrl+shift+alt+cmd+right",
     "command": "git.stageAll"
   },

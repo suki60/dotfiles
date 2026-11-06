@@ -1,0 +1,23 @@
+{
+  "name": "scm-message",
+  "displayName": "SCM Message",
+  "publisher": "suki60",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.90.0" },
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "extensionDependencies": ["vscode.git"],
+  "contributes": {
+    "commands": [
+      { "command": "scmMessage.generate", "title": "Generate commit message with /gm" }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.0"
+  }
+}
