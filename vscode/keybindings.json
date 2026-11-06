@@ -745,6 +745,11 @@
     "when": "auxiliaryBarFocus && activeAuxiliary == 'workbench.view.scm'"
   },
   {
+    "key": "cmd+p",
+    "command": "git.publish",
+    "when": "auxiliaryBarFocus && activeAuxiliary == 'workbench.view.scm'"
+  },
+  {
     "key": "shift+cmd+enter",
     "command": "git.stage",
     "when": "auxiliaryBarFocus && activeAuxiliary == 'workbench.view.scm' && !inputFocus"
