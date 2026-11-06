@@ -9,7 +9,8 @@
   "extensionDependencies": ["vscode.git"],
   "contributes": {
     "commands": [
-      { "command": "scmMessage.generate", "title": "Generate commit message with /gm" }
+      { "command": "scmMessage.generate", "title": "Generate commit message with /km" },
+      { "command": "scmMessage.stage", "title": "Stage described changes and generate commit message with /ks" }
     ]
   },
   "scripts": {

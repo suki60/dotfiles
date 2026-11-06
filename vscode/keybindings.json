@@ -619,8 +619,17 @@
     "command": "git.viewChanges"
   },
   {
-    "key": "ctrl+shift+alt+cmd+m",
+    "key": "ctrl+shift+alt+cmd+;",
     "command": "scmMessage.generate"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+'",
+    "command": "scmMessage.stage"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+enter",
+    "command": "workbench.action.tasks.runTask",
+    "args": "claude-commit"
   },
   {
     "key": "ctrl+shift+alt+cmd+right",

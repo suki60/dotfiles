@@ -30,7 +30,7 @@
     {
       "label": "claude-commit",
       "type": "shell",
-      "command": "claude -p --no-session-persistence --model haiku '/gc'",
+      "command": "claude -p --no-session-persistence --model haiku '/kc'",
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -43,7 +43,7 @@
     {
       "label": "claude-commit-push",
       "type": "shell",
-      "command": "claude -p --no-session-persistence --model haiku '/gc' && git push",
+      "command": "claude -p --no-session-persistence --model haiku '/ku'",
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -52,29 +52,6 @@
         "close": true
       },
       "problemMatcher": []
-    },
-    {
-      "label": "claude-stage-related",
-      "type": "shell",
-      "command": "claude -p --no-session-persistence --model haiku \"/gs $GS_DESCRIPTION\"",
-      "options": {
-        "cwd": "${workspaceFolder}",
-        "env": {
-          "GS_DESCRIPTION": "${input:gsDescription}"
-        }
-      },
-      "presentation": {
-        "reveal": "never",
-        "close": true
-      },
-      "problemMatcher": []
-    }
-  ],
-  "inputs": [
-    {
-      "id": "gsDescription",
-      "type": "promptString",
-      "description": "Describe the changes to stage"
     }
   ]
 }
