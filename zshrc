@@ -70,11 +70,11 @@ alias k="claude"
 alias kr="k --resume"
 alias kc="k --continue"
 alias ka="k agents"
-alias ku="k -p --no-session-persistence --model haiku \"/usage\""
 
 # kp what is foo? -> one prompt, no quotes; noglob keeps ? and * literal
 _kp() { claude -p --no-session-persistence --model haiku "$*" }
 alias kp="noglob _kp"
+alias ku="_kp /usage"
 
 # claude in ~ from anywhere; the subshell keeps your current dir
 kh() { (cd "$HOME" && claude "$@") }
@@ -88,7 +88,11 @@ alias x="codex"
 alias xr="x resume"
 alias xc="x resume --last"
 alias xa="x agents"
-alias xp="x exec --ephemeral"
+
+# xp what is foo? -> one prompt, no quotes; noglob keeps ? and * literal
+_xp() { codex exec --ephemeral "$*" }
+alias xp="noglob _xp"
+
 alias xs="$HOME/Documents/repos/dotfiles/bin/csessions"
 
 # codex in ~ from anywhere; the subshell keeps your current dir
@@ -98,7 +102,11 @@ xh() { (cd "$HOME" && codex "$@") }
 alias a="agy"
 alias ac="a --continue"
 alias aa="a agents"
-alias ap="a --print"
+
+# ap what is foo? -> one prompt, no quotes; noglob keeps ? and * literal
+_ap() { agy --print "$*" }
+alias ap="noglob _ap"
+
 alias as="$HOME/Documents/repos/dotfiles/bin/asessions"
 
 # antigravity in ~ from anywhere; the subshell keeps your current dir
