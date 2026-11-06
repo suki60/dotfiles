@@ -275,6 +275,10 @@
     "command": "expandLineSelection"
   },
   {
+    "key": "cmd+k",
+    "command": "copyAtMention.copy"
+  },
+  {
     "key": "cmd+;",
     "command": "editor.action.goToImplementation"
   },
@@ -480,10 +484,6 @@
   {
     "key": "ctrl+f",
     "command": "revealFileInOS"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "copyAtMention.copy"
   },
   {
     "key": "ctrl+n",
@@ -806,16 +806,6 @@
       "text": "\u001b\r"
     },
     "when": "terminalFocus"
-  },
-  {
-    "key": "cmd+k shift+cmd+enter",
-    "command": "workbench.action.tasks.runTask",
-    "args": "claude-commit"
-  },
-  {
-    "key": "cmd+k shift+cmd+s",
-    "command": "workbench.action.tasks.runTask",
-    "args": "claude-stage-related"
   },
   // git
   {
