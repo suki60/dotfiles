@@ -70,8 +70,11 @@ alias k="claude"
 alias kr="k --resume"
 alias kc="k --continue"
 alias ka="k agents"
-alias kp="k -p --no-session-persistence --model haiku"
 alias ku="k -p --no-session-persistence --model haiku \"/usage\""
+
+# kp what is foo? -> one prompt, no quotes; noglob keeps ? and * literal
+_kp() { claude -p --no-session-persistence --model haiku "$*" }
+alias kp="noglob _kp"
 
 # claude in ~ from anywhere; the subshell keeps your current dir
 kh() { (cd "$HOME" && claude "$@") }
