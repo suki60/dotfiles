@@ -152,6 +152,9 @@
     ]
   ],
   "tailwindCSS.lint.suggestCanonicalClasses": "ignore",
+  "terminal.integrated.commandsToSkipShell": [
+    "copyAtMention.copy"
+  ],
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeightBold": "normal",
