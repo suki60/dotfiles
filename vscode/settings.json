@@ -170,6 +170,7 @@
     }
   },
   "terminal.integrated.shellIntegration.enabled": false,
+  "terminal.integrated.tabs.location": "left",
   "typescriptExplorer.typeTree.view.icons.colors.enable": false,
   "typescriptExplorer.typeTree.view.icons.enable": false,
   "update.showReleaseNotes": false,
