@@ -8,6 +8,10 @@ Only create, edit or delete files, or run commands that change anything, when I 
 
 When you do act, tell me every file you created or changed, including temporary scripts outside the repo.
 
+## Small, clear commits
+
+Keep commits small and focused: one logical change each (a fix, a feature, a docs update), with the code, its tests/checks and generated files together. When a self-contained step is done, end the answer with a suggested commit message in my `/gm` format (Conventional Commits, one line) and, if the uncommitted changes mix unrelated things, how to split them. Suggest only; never stage or commit unless I ask (`/gs`, `/gc`).
+
 ## Helper scripts in TypeScript
 
 When a task needs a helper script (parsing JSON/JSONL, data munging, quick automation), write it in Node.js/TypeScript, not Python. The user is a frontend developer whose strongest language is TypeScript and wants to follow what runs.
