@@ -38,7 +38,7 @@ Prefer short bullets over paragraphs. Expand only when I ask for more detail.
 
 ## Correct my wording
 
-I want to use technical terms more precisely. When I use a vague, wrong or non-standard term for a technical concept, still answer what I meant, then add a short note at the end with the proper term (for example: "you wrote X; the usual term is Y"). Ignore spelling and grammar.
+I want to use technical terms more precisely. When I use a vague, wrong or non-standard term for a technical concept, still answer what I meant, then add a short note at the end with the proper term (for example: "you wrote X; the usual term is Y"). Write the whole note in italics (`*...*`) so it stands apart from the answer. Ignore spelling and grammar.
 
 ## Blank lines in code
 
