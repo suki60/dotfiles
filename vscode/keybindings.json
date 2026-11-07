@@ -836,6 +836,15 @@
     },
     "when": "terminalFocus"
   },
+  // Type /exit + Enter so Claude Code quits in one press (its own exit keys need a double press).
+  {
+    "key": "ctrl+escape",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "/exit\r"
+    },
+    "when": "terminalFocus"
+  },
   // git
   {
     "key": "cmd+g shift+cmd+f",
