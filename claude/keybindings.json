@@ -8,6 +8,13 @@
         "space": null,
         "meta+v": "voice:pushToTalk"
       }
+    },
+    {
+      "context": "Scroll",
+      "bindings": {
+        "home": "scroll:top",
+        "end": "scroll:bottom"
+      }
     }
   ]
 }
