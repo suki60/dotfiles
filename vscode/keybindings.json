@@ -311,12 +311,12 @@
     "command": "workbench.action.focusRightGroup"
   },
   {
-    "key": "cmd+escape",
+    "key": "ctrl+escape",
     "command": "workbench.action.terminal.focus",
     "when": "!terminalFocus"
   },
   {
-    "key": "cmd+escape",
+    "key": "ctrl+escape",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
   },
@@ -838,7 +838,7 @@
   },
   // Type /exit + Enter so Claude Code quits in one press (its own exit keys need a double press).
   {
-    "key": "ctrl+escape",
+    "key": "cmd+escape",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
       "text": "/exit\r"
