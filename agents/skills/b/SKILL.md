@@ -1,7 +1,7 @@
 ---
 name: b
-description: Answer what the best, most common or recommended way is to achieve what the user describes, following current best practices. Use only when the user invokes /b.
-argument-hint: "<what I want to achieve>"
+description: Answer what the best, most common or recommended way is to achieve what the user describes after /b (or, with nothing after it, what this conversation is working on), following current best practices. Use only when the user invokes /b.
+argument-hint: "[what I want to achieve]"
 disable-model-invocation: true
 ---
 
@@ -9,9 +9,9 @@ disable-model-invocation: true
 
 `/b` means "what is the best or most common way to do this, and what are the best practices?". It is a question, not a go-ahead: answer only, change nothing.
 
-What I want to achieve: `$ARGUMENTS`
+What I want to achieve, from the user (may be empty): `$ARGUMENTS`
 
-If that is empty, ask in one line what I want to achieve and stop.
+If that is empty, the goal is what this conversation is currently working on: the latest task, question or change in progress. Start the answer with `Goal: <goal>` in one line so I can correct it. Only if the conversation has nothing to go on, ask in one line what I want to achieve and stop.
 
 ## Steps
 
