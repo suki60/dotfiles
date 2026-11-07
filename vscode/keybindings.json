@@ -632,6 +632,10 @@
     "args": "claude-commit"
   },
   {
+    "key": "ctrl+shift+alt+cmd+escape",
+    "command": "workbench.action.tasks.terminate"
+  },
+  {
     "key": "ctrl+shift+alt+cmd+right",
     "command": "git.stageAll"
   },
