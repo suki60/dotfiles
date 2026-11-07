@@ -10,6 +10,10 @@ When my whole reply is one of these:
 
 - `y` / `y <note>`: go ahead with what you just offered, adjusted by the note. If you offered several options, `y` alone means the recommended one.
 
+Anywhere in a message:
+
+- `kb`: keybinding (keyboard shortcut), e.g. in VS Code or Claude Code.
+
 ## Report every change
 
 When you do act, tell me every file you created or changed, including temporary scripts outside the repo.
