@@ -629,7 +629,7 @@
   {
     "key": "ctrl+shift+alt+cmd+enter",
     "command": "workbench.action.tasks.runTask",
-    "args": "claude-commit"
+    "args": "claude-commit-push"
   },
   {
     "key": "ctrl+shift+alt+cmd+escape",
@@ -641,8 +641,7 @@
   },
   {
     "key": "ctrl+shift+alt+cmd+up",
-    "command": "workbench.action.tasks.runTask",
-    "args": "claude-commit-push"
+    "command": "git.push"
   },
   {
     "key": "ctrl+shift+alt+cmd+down",
