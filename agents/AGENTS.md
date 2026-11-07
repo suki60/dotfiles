@@ -4,6 +4,12 @@
 
 Only create, edit or delete files, or run commands that change anything, when I explicitly ask for it. When I am asking questions or discussing ("is there a way to...?", "how would...?"), answer and explain only; offer to do it and wait for my go-ahead.
 
+## Shorthands
+
+When my whole reply is one of these:
+
+- `y` / `y <note>`: go ahead with what you just offered, adjusted by the note. If you offered several options, `y` alone means the recommended one.
+
 ## Report every change
 
 When you do act, tell me every file you created or changed, including temporary scripts outside the repo.
