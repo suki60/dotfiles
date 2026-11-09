@@ -92,6 +92,17 @@ for script in "$DOTFILES"/raycast/scripts/*; do
   link "$script" "$SCRIPTS/$(basename "$script")"
 done
 
+# Menu bar plugins: point SwiftBar straight at the repo's folder.
+echo "→ SwiftBar"
+SWIFTBAR="$DOTFILES/swiftbar"
+
+if [[ "$(defaults read com.ameba.SwiftBar PluginDirectory 2>/dev/null)" == "$SWIFTBAR" ]]; then
+  echo "  skip  plugin folder"
+else
+  defaults write com.ameba.SwiftBar PluginDirectory "$SWIFTBAR"
+  echo "  set   plugin folder → $SWIFTBAR"
+fi
+
 # Latest Node LTS via fnm; only print fnm's output when it did something.
 echo "→ Node"
 node_out="$(fnm install --lts 2>&1)" || { echo "$node_out"; exit 1; }

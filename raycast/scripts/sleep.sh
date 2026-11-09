@@ -21,3 +21,5 @@ if ! sudo -n /usr/bin/pmset -a disablesleep 0 2>/dev/null; then
   echo "Missing sudo rule: run sudo visudo -f /etc/sudoers.d/pmset"
   exit 1
 fi
+
+open -g "swiftbar://refreshplugin?name=awake"
