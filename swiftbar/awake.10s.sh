@@ -12,12 +12,12 @@
 SCRIPTS="$(cd "$(dirname "$0")/../raycast/scripts" && pwd)"
 
 if pmset -g | grep -q "SleepDisabled[[:space:]]*1"; then
-  echo " | sfimage=sun.max.fill"
+  echo " | sfimage=cup.and.heat.waves.fill"
   echo "---"
   echo "Awake: on (stays on with the lid closed)"
   echo "Turn off | bash=/usr/bin/sudo param1=-n param2=/usr/bin/pmset param3=-a param4=disablesleep param5=0 terminal=false refresh=true"
 else
-  echo " | sfimage=moon.zzz"
+  echo " | sfimage=cup.and.heat.waves"
   echo "---"
   echo "Awake: off (sleeps normally)"
   echo "Turn on | bash=$SCRIPTS/awake.sh terminal=false refresh=true"
