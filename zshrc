@@ -72,8 +72,9 @@ alias kr="k --resume"
 alias kc="k --continue"
 alias ka="k agents"
 
-# tmux: attach to "main", or create it if missing
-alias tm="tmux new -As main"
+# tmux
+alias tx="tmux"
+alias txm="tmux new -As main"
 
 # kp what is foo? -> one prompt, no quotes; noglob keeps ? and * literal
 _kp() { claude -p --no-session-persistence --model haiku "$*" }
