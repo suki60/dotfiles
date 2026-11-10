@@ -1,0 +1,6 @@
+# Lets raycast/scripts/awake.sh (and the SwiftBar Awake plugin) toggle
+# pmset disablesleep without a password prompt.
+#
+# Add it with: sudo visudo -f /etc/sudoers.d/pmset
+# and paste the line below.
+suki60 ALL=(root) NOPASSWD: /usr/bin/pmset -a disablesleep 0, /usr/bin/pmset -a disablesleep 1
