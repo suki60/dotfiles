@@ -24,8 +24,9 @@ link() {
 echo "Dotfiles: $DOTFILES"
 echo ""
 
-# zsh config.
+# zsh config: zshenv for every shell, zshrc for interactive ones.
 echo "→ Shell"
+link "$DOTFILES/zshenv"      "$HOME/.zshenv"
 link "$DOTFILES/zshrc"       "$HOME/.zshrc"
 
 # Shift+arrow selection on the command line (not in Homebrew).
