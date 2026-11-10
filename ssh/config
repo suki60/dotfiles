@@ -1,0 +1,14 @@
+# Machine-only hosts, kept out of this public repo
+Include ~/.ssh/config.local
+
+Host github.com
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+# Reuse one connection for repeated calls (docker over ssh, scripts)
+Host mac-black
+  User suki60
+  IdentityFile ~/.ssh/id_ed25519
+  ControlMaster auto
+  ControlPath ~/.ssh/cm-%r@%h:%p
+  ControlPersist 10m

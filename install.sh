@@ -38,6 +38,10 @@ else
   git clone --depth 1 https://github.com/jirutka/zsh-shift-select.git "$SHIFT_SELECT"
 fi
 
+# SSH hosts and connection reuse.
+echo "→ SSH"
+link "$DOTFILES/ssh/config"   "$HOME/.ssh/config"
+
 # Prompt theme.
 echo "→ Starship"
 link "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
