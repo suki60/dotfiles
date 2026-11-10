@@ -173,7 +173,7 @@ BLK="04" CHR="04" DIR="04" EXE="00" REG="00" HARDLINK="00" SYMLINK="06" MISSING=
 export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$OTHER"
 
 # zsh
-alias szsh="source ~/.zshrc"
+alias sz="source ~/.zshrc"
 copy-last-output() {
   local cmd=$(fc -ln -1)
 
