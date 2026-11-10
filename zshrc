@@ -147,6 +147,10 @@ alias dce="dc exec"
 alias dcu="dc up"
 alias dcd="dc down"
 
+# mac-black
+alias vnc="open vnc://mac-black"
+alias smb="open smb://suki60@mac-black"
+
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
 
