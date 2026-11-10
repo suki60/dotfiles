@@ -17,6 +17,8 @@ cursor-style-blink = false
 
 # behavior
 shell-integration = zsh
+# Over ssh, copy Ghostty's terminfo to the remote host, or fall back to xterm-256color, so keys like Delete work.
+shell-integration-features = ssh-terminfo,ssh-env
 copy-on-select = false
 confirm-close-surface = false
 
