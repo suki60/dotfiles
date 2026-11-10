@@ -152,6 +152,10 @@ alias bk="ssh suki60@mac-black"
 alias bkv="open vnc://mac-black"
 alias bkf="open smb://suki60@mac-black"
 
+# raycast
+alias rq="osascript -e 'quit app \"Raycast\"'"
+alias ro="open -a Raycast"
+
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
 
