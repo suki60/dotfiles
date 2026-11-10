@@ -153,7 +153,7 @@ alias bkv="open vnc://mac-black"
 alias bkf="open smb://suki60@mac-black"
 
 # raycast
-alias rq="osascript -e 'quit app \"Raycast\"'"
+alias rq="osascript -e 'quit app \"Raycast\"' 2>/dev/null"
 alias ro="open -a Raycast"
 
 # fnm
