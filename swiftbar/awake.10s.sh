@@ -12,12 +12,12 @@
 AWAKE="$(cd "$(dirname "$0")/../raycast/scripts" && pwd)/awake.sh"
 
 if pmset -g | grep -q "SleepDisabled[[:space:]]*1"; then
-  echo " | sfimage=cup.and.heat.waves.fill"
+  echo " | sfimage=storefront.fill"
   echo "---"
   echo "Awake: on (stays on with the lid closed)"
   echo "Turn off | bash=$AWAKE terminal=false refresh=true"
 else
-  echo " | sfimage=cup.and.heat.waves"
+  echo " | sfimage=storefront"
   echo "---"
   echo "Awake: off (sleeps normally)"
   echo "Turn on | bash=$AWAKE terminal=false refresh=true"
