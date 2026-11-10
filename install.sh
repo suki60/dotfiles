@@ -28,6 +28,15 @@ echo ""
 echo "→ Shell"
 link "$DOTFILES/zshrc"       "$HOME/.zshrc"
 
+# Shift+arrow selection on the command line (not in Homebrew).
+SHIFT_SELECT="$HOME/.local/share/zsh-shift-select"
+
+if [[ -d "$SHIFT_SELECT" ]]; then
+  echo "  skip  zsh-shift-select"
+else
+  git clone --depth 1 https://github.com/jirutka/zsh-shift-select.git "$SHIFT_SELECT"
+fi
+
 # Prompt theme.
 echo "→ Starship"
 link "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"

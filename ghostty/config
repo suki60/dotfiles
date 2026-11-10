@@ -33,6 +33,9 @@ keybind = ctrl+shift+alt+cmd+\=toggle_split_zoom
 keybind = cmd+z=text:\x1f
 # Send Alt+V so Claude Code starts voice push-to-talk.
 keybind = ctrl+shift+alt+cmd+space=text:\x1bv
+# Send Shift+Home / Shift+End so zsh-shift-select selects to the line start / end.
+keybind = cmd+shift+left=text:\x1b[1;2H
+keybind = cmd+shift+right=text:\x1b[1;2F
 # Type exit + Enter to quit Claude Code, shells and ssh sessions in one press.
 keybind = cmd+escape=text:exit\r
 # Shrink the split to ~1/3: reset to 50/50 first so repeated presses land on the same size

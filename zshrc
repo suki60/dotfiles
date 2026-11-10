@@ -221,6 +221,9 @@ bindkey '^[^M' run-and-copy-output
 autoload -Uz add-zsh-hook
 add-zsh-hook zshaddhistory _copy_output_history
 
+# zsh-shift-select: select with Shift+arrows, then type or Backspace to replace it
+source ~/.local/share/zsh-shift-select/zsh-shift-select.plugin.zsh
+
 # zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
