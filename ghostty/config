@@ -33,8 +33,8 @@ keybind = ctrl+shift+alt+cmd+\=toggle_split_zoom
 keybind = cmd+z=text:\x1f
 # Send Alt+V so Claude Code starts voice push-to-talk.
 keybind = ctrl+shift+alt+cmd+space=text:\x1bv
-# Type /exit + Enter so Claude Code quits in one press (its own exit keys need a double press).
-keybind = cmd+escape=text:/exit\r
+# Type exit + Enter to quit Claude Code, shells and ssh sessions in one press.
+keybind = cmd+escape=text:exit\r
 # Shrink the split to ~1/3: reset to 50/50 first so repeated presses land on the same size
 keybind = ctrl+shift+alt+cmd+]=equalize_splits
 keybind = chain=resize_split:right,267
