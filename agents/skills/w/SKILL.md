@@ -18,7 +18,7 @@ Context from the user (may be empty): `$ARGUMENTS`
 3. A diagram comparing the pick with the other options on the points that matter (to this project and to the context above).
 4. If it helps, a second diagram of how the pick works in this code: real files, functions and data flow.
 5. At most 3 short bullets for what the diagrams can't carry, and one line on when another option would win.
-6. Wait for my go-ahead (`/n` or a reply).
+6. Wait for my go-ahead (`/d`, `/n` or a reply).
 
 ## How to draw
 

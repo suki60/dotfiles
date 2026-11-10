@@ -25,7 +25,7 @@ Context from the user (may be empty): `$ARGUMENTS`
 3. A bordered comparison table of the points that matter (effort, complexity, performance, maintenance, fit with this code, and anything named in the context above).
 4. One line: `Pick: <option>`, with when each of the others would win instead. If the current solution is still the best, say so.
 5. If an alternative depends on something recent (library versions, new APIs), check the official docs rather than answering from memory, and link the source.
-6. Offer to apply the pick and wait for my go-ahead (`y`, `/n` or a reply).
+6. Offer to apply the pick and wait for my go-ahead (`y`, `/d`, `/n` or a reply).
 
 ## How to draw
 

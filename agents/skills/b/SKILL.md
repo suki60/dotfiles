@@ -21,7 +21,7 @@ If that is empty, the goal is what this conversation is currently working on: th
 4. Best practices: at most 5 short bullets (do's, don'ts, common pitfalls).
 5. Alternatives: one line each, with when to pick them instead.
 6. If the answer depends on something recent (library versions, new APIs), check the official docs rather than answering from memory, and link the source.
-7. Offer to apply it and wait for my go-ahead (`y`, `/n` or a reply).
+7. Offer to apply it and wait for my go-ahead (`y`, `/d`, `/n` or a reply).
 
 ## How to draw
 
