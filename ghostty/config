@@ -47,6 +47,9 @@ keybind = ctrl+shift+alt+cmd+[=equalize_splits
 keybind = ctrl+shift+alt+cmd+d=new_split:right
 keybind = chain=equalize_splits
 keybind = chain=resize_split:right,406
+# Move the current tab one place left / right (wraps at the ends).
+keybind = alt+[=move_tab:-1
+keybind = alt+]=move_tab:1
 
 # macOS
 macos-option-as-alt = true
