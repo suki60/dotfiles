@@ -404,24 +404,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+'",
-    "command": "bracketeer.removeQuotes",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+'",
-    "command": "bracketeer.changeQuotesTo"
-  },
-  {
-    "key": "alt+[",
-    "command": "bracketeer.removeBrackets",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+[",
-    "command": "bracketeer.changeBracketsTo"
-  },
-  {
     "key": "shift+alt+backspace",
     "command": "editor.action.deleteLines",
     "when": "editorTextFocus && !editorReadonly"
@@ -430,10 +412,6 @@
     "key": "alt+-",
     "command": "deleteInsideWord",
     "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+k",
-    "command": "claude-vscode.insertAtMention"
   },
   {
     "key": "shift+enter",
