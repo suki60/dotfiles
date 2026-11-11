@@ -28,7 +28,7 @@ keybind = cmd+enter=text:\x1b\r
 # Send Alt+A so zsh runs copy-last-output.
 keybind = shift+cmd+enter=text:\x1ba
 # Zoom the current split to fill the tab (Ghostty's default on shift+cmd+enter).
-keybind = ctrl+shift+alt+cmd+\=toggle_split_zoom
+keybind = ctrl+alt+cmd+space=toggle_split_zoom
 # Send Ctrl+_ so zsh undoes the last line edit.
 keybind = cmd+z=text:\x1f
 # Send Alt+V so Claude Code starts voice push-to-talk.
