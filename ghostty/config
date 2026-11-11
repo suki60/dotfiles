@@ -50,6 +50,9 @@ keybind = chain=resize_split:right,406
 # Move the current tab one place left / right (wraps at the ends).
 keybind = alt+[=move_tab:-1
 keybind = alt+]=move_tab:1
+# New split on the right / left, like cmd+d.
+keybind = shift+cmd+]=new_split:right
+keybind = shift+cmd+[=new_split:left
 
 # macOS
 macos-option-as-alt = true
