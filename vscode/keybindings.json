@@ -529,6 +529,14 @@
     "command": "workbench.action.navigateBack"
   },
   {
+    "key": "ctrl+]",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.previousEditor"
+  },
+  {
     "key": "ctrl+\\",
     "command": "workbench.action.pinEditor",
     "when": "!activeEditorIsPinned"

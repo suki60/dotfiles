@@ -50,6 +50,9 @@ keybind = chain=resize_split:right,406
 # Move the current tab one place left / right (wraps at the ends).
 keybind = alt+[=move_tab:-1
 keybind = alt+]=move_tab:1
+# Go to the tab on the right / left.
+keybind = ctrl+]=next_tab
+keybind = ctrl+[=previous_tab
 # New split on the right / left, like cmd+d.
 keybind = shift+cmd+]=new_split:right
 keybind = shift+cmd+[=new_split:left
