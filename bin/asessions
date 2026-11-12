@@ -38,8 +38,8 @@ while true; do
   [[ -z "$line" || "$key" == q ]] && exit 0
   id="${line%%$'\t'*}"
   case "$key" in
-    "") cd "$DIR" && exec agy --settings "$SETTINGS" --conversation "$id" ;;
-    n) cd "$DIR" && exec agy --settings "$SETTINGS" ;;
+    "") cd "$DIR" && exec agy --dangerously-skip-permissions --settings "$SETTINGS" --conversation "$id" ;;
+    n) cd "$DIR" && exec agy --dangerously-skip-permissions --settings "$SETTINGS" ;;
     c)
       if [[ -d "$AGY/brain/$id" ]]; then
         code "$AGY/brain/$id"

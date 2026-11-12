@@ -3,12 +3,6 @@
   "altScreenMode": "always",
   "artifactReviewPolicy": "always-proceed",
   "model": "Gemini 4 Argon (Medium)",
-  "permissions": {
-    "allow": [
-      "command(git)",
-      "command(pbcopy)"
-    ]
-  },
   "trustedWorkspaces": [
     "/Users/suki60",
     "/Users/suki60/Documents/repos/cv",

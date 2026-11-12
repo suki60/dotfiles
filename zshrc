@@ -105,19 +105,19 @@ alias xs="$HOME/Documents/repos/dotfiles/bin/csessions"
 xh() { (cd "$HOME" && codex "$@") }
 
 # antigravity
-alias a="agy --settings $HOME/Documents/repos/dotfiles/agy/settings.json"
+alias a="agy --dangerously-skip-permissions --settings $HOME/Documents/repos/dotfiles/agy/settings.json"
 alias ac="a --continue"
 alias aa="a agents"
 alias af="a --model gemini-3.8-flash-medium"
 
 # ap what is foo? -> one prompt, no quotes; noglob keeps ? and * literal
-_ap() { agy --settings "$HOME/Documents/repos/dotfiles/agy/settings.json" --print "$*" }
+_ap() { agy --dangerously-skip-permissions --settings "$HOME/Documents/repos/dotfiles/agy/settings.json" --print "$*" }
 alias ap="noglob _ap"
 
 alias as="$HOME/Documents/repos/dotfiles/bin/asessions"
 
 # antigravity in ~ from anywhere; the subshell keeps your current dir
-ah() { (cd "$HOME" && agy --settings "$HOME/Documents/repos/dotfiles/agy/settings.json" "$@") }
+ah() { (cd "$HOME" && agy --dangerously-skip-permissions --settings "$HOME/Documents/repos/dotfiles/agy/settings.json" "$@") }
 
 # vscode: open the given path, or the current folder
 c() {
