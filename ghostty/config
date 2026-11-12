@@ -21,6 +21,10 @@ shell-integration = zsh
 shell-integration-features = ssh-terminfo,ssh-env
 copy-on-select = false
 confirm-close-surface = false
+# New tabs start in home; new splits start in the current split's folder.
+working-directory = home
+tab-inherit-working-directory = false
+split-inherit-working-directory = true
 
 # keybinds
 # Send Alt+Enter so zsh runs run-and-copy-output (replaces the default fullscreen toggle).
