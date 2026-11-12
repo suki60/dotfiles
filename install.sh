@@ -71,6 +71,10 @@ echo "→ Claude"
 link "$DOTFILES/claude/settings.json" "$HOME/.claude/settings.json"
 link "$DOTFILES/claude/keybindings.json" "$HOME/.claude/keybindings.json"
 
+# Antigravity CLI settings.
+echo "→ Antigravity"
+link "$DOTFILES/agy/settings.json" "$HOME/.gemini/antigravity-cli/settings.json"
+
 # Shared global instructions and skills for Claude Code, Codex and agy.
 # Each pair is the instructions file and the skills folder the tool reads.
 echo "→ Agents"

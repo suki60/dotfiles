@@ -1,0 +1,15 @@
+{
+  "agentMode": "auto",
+  "altScreenMode": "always",
+  "artifactReviewPolicy": "always-proceed",
+  "model": "Gemini 4 Argon (Medium)",
+  "trustedWorkspaces": [
+    "/Users/suki60",
+    "/Users/suki60/Documents/repos/cv",
+    "/Users/suki60/Documents/repos/dotfiles",
+    "/Users/suki60/Documents/repos/nuv",
+    "/Users/suki60/Documents/repos/offwik",
+    "/Users/suki60/Documents/repos/portfolio",
+    "/Users/suki60/Documents/repos/wiki-rag"
+  ]
+}
