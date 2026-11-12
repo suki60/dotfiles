@@ -10,6 +10,7 @@ command -v sqlite3 >/dev/null || { echo "sqlite3 required"; exit 1; }
 DIR="${1:-$PWD}"
 DIR="$(cd "$DIR" && pwd -P)"
 AGY="$HOME/.gemini/antigravity-cli"
+SETTINGS="$HOME/Documents/repos/dotfiles/agy/settings.json"
 DB="$AGY/conversation_summaries.db"
 
 [[ -f "$DB" ]] || { echo "No agy summaries db at $DB"; exit 1; }
@@ -37,8 +38,8 @@ while true; do
   [[ -z "$line" || "$key" == q ]] && exit 0
   id="${line%%$'\t'*}"
   case "$key" in
-    "") cd "$DIR" && exec agy --conversation "$id" ;;
-    n) cd "$DIR" && exec agy ;;
+    "") cd "$DIR" && exec agy --settings "$SETTINGS" --conversation "$id" ;;
+    n) cd "$DIR" && exec agy --settings "$SETTINGS" ;;
     c)
       if [[ -d "$AGY/brain/$id" ]]; then
         code "$AGY/brain/$id"
