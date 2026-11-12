@@ -71,6 +71,7 @@ alias k="claude"
 alias kr="k --resume"
 alias kc="k --continue"
 alias ka="k agents"
+alias kn="k --model sonnet"
 
 # tmux
 alias tx="tmux"
@@ -107,6 +108,7 @@ xh() { (cd "$HOME" && codex "$@") }
 alias a="agy"
 alias ac="a --continue"
 alias aa="a agents"
+alias af="a --model gemini-3.8-flash-medium"
 
 # ap what is foo? -> one prompt, no quotes; noglob keeps ? and * literal
 _ap() { agy --print "$*" }
