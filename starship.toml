@@ -5,3 +5,7 @@ disabled = true
 # Hide the git status indicators ([!], [$], etc.)
 [git_status]
 disabled = true
+
+# Hide the Google Cloud account (☁️ user@example.com)
+[gcloud]
+disabled = true
