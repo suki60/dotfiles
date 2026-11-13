@@ -1,13 +1,13 @@
 ---
-name: r
-description: Remind the user what they still had to do. No argument = the last step you asked the user to do (usually a command to run); any text = a hint about which step or why they're asking. Use only when the user invokes /r.
+name: rll
+description: Remind the user what they still had to do. No argument = the last step you asked the user to do (usually a command to run); any text = a hint about which step or why they're asking. Use only when the user invokes /rll.
 argument-hint: "[hint about the step]"
 disable-model-invocation: true
 ---
 
 # Remind me
 
-`/r` means "I asked other questions in between and lost track: what was I supposed to do?". It is a question, not a go-ahead: answer only, change nothing and run nothing.
+`/rll` means "I asked other questions in between and lost track: what was I supposed to do?". It is a question, not a go-ahead: answer only, change nothing and run nothing.
 
 Hint from the user (may be empty): `$ARGUMENTS`
 
