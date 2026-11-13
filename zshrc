@@ -233,6 +233,19 @@ source ~/.local/share/zsh-shift-select/zsh-shift-select.plugin.zsh
 # zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Tab accepts the grey suggestion if one is showing, else completes as usual.
+# One tap on phone keyboards (Termius) that have no right arrow.
+tab-accept-or-complete() {
+  if [[ -n $POSTDISPLAY ]]; then
+    zle autosuggest-accept
+  else
+    zle expand-or-complete
+  fi
+}
+
+zle -N tab-accept-or-complete
+bindkey '^I' tab-accept-or-complete
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/suki60/.docker/completions $fpath)
 autoload -Uz compinit
