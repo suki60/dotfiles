@@ -840,6 +840,15 @@
     },
     "when": "terminalFocus"
   },
+  // Type /n + Enter so Claude Code does the next step.
+  {
+    "key": "alt+n",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "/n\r"
+    },
+    "when": "terminalFocus"
+  },
   // git
   {
     "key": "cmd+g shift+cmd+f",
