@@ -849,6 +849,15 @@
     },
     "when": "terminalFocus"
   },
+  // Type /s + Enter so Claude Code summarizes the conversation.
+  {
+    "key": "alt+s",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "/s\r"
+    },
+    "when": "terminalFocus"
+  },
   // git
   {
     "key": "cmd+g shift+cmd+f",
