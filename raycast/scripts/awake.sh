@@ -29,4 +29,6 @@ fi
 
 # Update the SwiftBar indicator right away instead of on its next refresh.
 # Only when it's running: launching SwiftBar through this URL crashes it.
-pgrep -xq SwiftBar && open -g "swiftbar://refreshplugin?name=awake"
+if pgrep -xq SwiftBar; then
+  open -g "swiftbar://refreshplugin?name=awake"
+fi
