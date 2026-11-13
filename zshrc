@@ -71,7 +71,7 @@ alias k="claude"
 alias kr="k --resume"
 alias kc="k --continue"
 alias ka="k agents"
-alias kn="k --model sonnet"
+alias kms="k --model sonnet"
 
 # tmux
 alias tx="tmux"
@@ -108,7 +108,7 @@ xh() { (cd "$HOME" && codex "$@") }
 alias a="agy --dangerously-skip-permissions --settings $HOME/Documents/repos/dotfiles/agy/settings.json"
 alias ac="a --continue"
 alias aa="a agents"
-alias af="a --model gemini-3.8-flash-medium"
+alias amh="a --model gemini-4-hydrogen-medium"
 
 # ap what is foo? -> one prompt, no quotes; noglob keeps ? and * literal
 _ap() { agy --dangerously-skip-permissions --settings "$HOME/Documents/repos/dotfiles/agy/settings.json" --print "$*" }
