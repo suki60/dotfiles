@@ -115,6 +115,19 @@ if [[ "$(defaults read com.ameba.SwiftBar PluginDirectory 2>/dev/null)" == "$SWI
 else
   defaults write com.ameba.SwiftBar PluginDirectory "$SWIFTBAR"
   echo "  set   plugin folder → $SWIFTBAR"
+
+  # Restart it so it reads the new folder.
+  if pgrep -xq SwiftBar; then
+    killall SwiftBar
+    open -ga SwiftBar
+  fi
+fi
+
+# The Awake toggle needs a passwordless pmset rule (see sudoers/pmset).
+if sudo -n -l /usr/bin/pmset -a disablesleep 1 >/dev/null 2>&1; then
+  echo "  skip  pmset sudo rule"
+else
+  echo "  todo  pmset sudo rule: sudo visudo -f /etc/sudoers.d/pmset (see sudoers/pmset)"
 fi
 
 # Latest Node LTS via fnm; only print fnm's output when it did something.
