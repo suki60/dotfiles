@@ -14,6 +14,7 @@ Anywhere in a message:
 
 - `kb`: keybinding (keyboard shortcut), e.g. in VS Code or Claude Code.
 - `rm`: remove.
+- `imo`: in my opinion.
 - `c(<text>)`: I'm unsure of the wording inside the parentheses. Correct only that text: give the precise term(s) in the italic note from "Correct my wording", even if my wording was close. Read the rest of the message as normal.
 
 ## Report every change
