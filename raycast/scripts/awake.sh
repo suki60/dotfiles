@@ -27,5 +27,6 @@ if ! sudo -n /usr/bin/pmset -a disablesleep "$value" 2>/dev/null; then
   exit 1
 fi
 
-# Update the SwiftBar indicator right away instead of on its next refresh
-open -g "swiftbar://refreshplugin?name=awake"
+# Update the SwiftBar indicator right away instead of on its next refresh.
+# Only when it's running: launching SwiftBar through this URL crashes it.
+pgrep -xq SwiftBar && open -g "swiftbar://refreshplugin?name=awake"
