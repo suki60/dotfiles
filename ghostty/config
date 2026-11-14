@@ -48,6 +48,8 @@ keybind = alt+enter=text:/gu\r
 keybind = alt+n=text:/n\r
 # Type /s + Enter so Claude Code summarizes the conversation.
 keybind = alt+s=text:/s\r
+# Type /clear + Enter so Claude Code starts a fresh conversation.
+keybind = alt+l=text:/clear\r
 # Type exit + Enter to quit shells and ssh sessions.
 keybind = ctrl+escape=text:exit\r
 # Shrink the split to ~1/3: reset to 50/50 first so repeated presses land on the same size

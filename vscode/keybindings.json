@@ -858,6 +858,15 @@
     },
     "when": "terminalFocus"
   },
+  // Type /clear + Enter so Claude Code starts a fresh conversation.
+  {
+    "key": "alt+l",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "/clear\r"
+    },
+    "when": "terminalFocus"
+  },
   // git
   {
     "key": "cmd+g shift+cmd+f",
