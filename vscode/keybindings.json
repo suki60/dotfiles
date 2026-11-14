@@ -824,7 +824,7 @@
   },
   // Type /exit + Enter so Claude Code quits in one press (its own exit keys need a double press).
   {
-    "key": "cmd+escape",
+    "key": "alt+escape",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
       "text": "/exit\r"
