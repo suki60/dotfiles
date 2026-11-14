@@ -43,7 +43,7 @@ keybind = cmd+shift+right=text:\x1b[1;2F
 # Type /exit + Enter so Claude Code quits in one press (its own exit keys need a double press).
 keybind = cmd+escape=text:/exit\r
 # Type /gu + Enter so Claude Code commits and pushes this session's changes.
-keybind = ctrl+shift+alt+cmd+enter=text:/gu\r
+keybind = alt+enter=text:/gu\r
 # Type /n + Enter so Claude Code does the next step.
 keybind = alt+n=text:/n\r
 # Type /s + Enter so Claude Code summarizes the conversation.

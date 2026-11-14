@@ -831,9 +831,9 @@
     },
     "when": "terminalFocus"
   },
-  // Type /gu + Enter so Claude Code commits and pushes this session's changes (outside the terminal, the claude-commit-push task runs /ku).
+  // Type /gu + Enter so Claude Code commits and pushes this session's changes.
   {
-    "key": "ctrl+shift+alt+cmd+enter",
+    "key": "alt+enter",
     "command": "workbench.action.terminal.sendSequence",
     "args": {
       "text": "/gu\r"
