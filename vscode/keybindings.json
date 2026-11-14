@@ -311,12 +311,12 @@
     "command": "workbench.action.focusRightGroup"
   },
   {
-    "key": "ctrl+escape",
+    "key": "ctrl+space",
     "command": "workbench.action.terminal.focus",
     "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+escape",
+    "key": "ctrl+space",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
   },
